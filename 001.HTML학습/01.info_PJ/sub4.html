@@ -74,8 +74,8 @@
                     [서울=뉴시스]윤현성 기자 = 우리나라의 첫 달 궤도선
                     '다누리'<sup>①</sup>가 지난 8월 발사된 이후 4개월 만에 최종 목적지인
                     달<sup>②</sup>에 도착한다. 이제 다누리는 달 영향권에 <b>최종 진입하기</b> 위해
-                    가장 어려운 임무 중 하나를 수행하게 된다. <b>총알보다 빠른 다누리</b>를 
-                    총알과 같은 속도의 달에 정확하게 맞춰야 한다.
+                    가장 어려운 임무<sub>misson</sub> 중 하나를 수행하게 된다. <b>총알보다 빠른 다누리</b>를 
+                    총알과 같은 속도<sub>速度</sub>의 달에 정확하게 맞춰야 한다.
                 </p>
 
                 <p>
@@ -109,9 +109,12 @@
                 </p>
 
                 <p>
-                    이처럼 달 궤도 진입기동은 굉장한 고난이도의 작업이지만, 이
-                    또한 임무 성공 가능성을 최대한 높이기 위한 항우연의
-                    계산·분석의 산물이다.
+                    항우연 수석연구원 공유씨가 이렇게 말했다. 
+                    <q>
+                        이처럼 달 궤도 진입기동은 굉장한 고난이도의 작업이지만, 이
+                        또한 임무 성공 가능성을 최대한 높이기 위한 항우연의
+                        계산·분석의 산물입니다.
+                    </q>
                 </p>
 
                 <p>
@@ -156,6 +159,19 @@
                 ② 지구에 가장 가까운 위성이자 우주적 생명력의 전형으로 믿어진 종교상징물. 달이 태양과 같은 방향에 있을 때는 지구가 달의 그늘을 향하게 되므로 안 보인다.
             </article>
 
+            <hr>
+
+            <!-- 이용블록 영역 -->
+            <article class="qb">
+                <h5>한국우주연구원 소개 인용</h5>
+                <blockquote cite="https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC%EC%97%B0%EA%B5%AC%EC%9B%90">
+                    한국항공우주연구원(韓國航空宇宙硏究院, 영어: Korea Aerospace Research Institute, KARI), 약자로 항우연은 대전광역시 유성구 어은동에 위치하는 과학기술정보통신부 산하 항공우주 과학기술 관련 기타공공기관 재단법인이다.
+                    <br><br>
+                    '과학기술분야 정부출연 연구기관 등의 설립ㆍ운영 및 육성에 관한 법률'에 근거하여 1989년 10월 10일 설립되었다. 설립 목적은 우주항공기술 개발, 항공공학의 발전과 기술 개발 및 보급 등을 통한 경제 발전과 국민생활 향상이다.
+                </blockquote>
+            </article>
+
+            <hr>
 
             <!-- 2-5.기자정보 -->
             <div class="rpt">윤현성 기자(hsyhs@newsis.com)</div>
@@ -165,7 +181,7 @@
                     href="https://n.news.naver.com/mnews/article/003/0011594397?sid=105"
                     target="_blank"
                 >
-                    기사원문
+                    기사
                 </a>
             </h5>
         </main>
@@ -210,6 +226,23 @@
             2) 윗첨자 <sup> 
                 - 약간윗쪽 작은글자 (Superscript text) 
                 - 주석표시숫자(숫자와 설명을 연결)
+            
+
+            [ 2. 인용관련요소 ]
+            1. <blockquote> 
+                - 블록요소로 별도의 인용구를 구분하는 박스
+                - 주의 : 내부에 p요소와 같은 다른블록 쓰면 안됨
+                - cite 속성 : 출처표시
+                (필수속성은 아니면 url주소가 들어가기 때문에 링크로 오해도리 수 있으나 아님! 단순 출처정보)
+            2. <q> 
+                - 작은 인용구(쌍따옴표가 자동생성)
+                - 주의 : 인라인요소임(blockquote와 구분할 것!)
+
+            <abbr>   Defines an abbreviation or acronym
+            <address>   Defines contact information for the author/owner of a document
+            <bdo>   Defines the text direction
+            <cite>   Defines the title of a work
+
 
             [ 시멘틱 태그란? ]
             - sementic(의미론적인, 의미있는)
@@ -218,7 +251,6 @@
             예) strong, em, address, header, footer, nav, main, section, article 등 html5에서 더욱 강조됨!
             
             - 시멘틱태그를 쓰면 검색을 더욱 정교하게 분석적으로 수행할 수 있는 바탕이 마련된다!(검색최적화)
-
         -->
     </body>
 </html>
