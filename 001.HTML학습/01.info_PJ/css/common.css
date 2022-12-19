@@ -107,7 +107,7 @@ body {
         참고)
         https://www.w3schools.com/css/css_border.asp
     */
-    border: 5px double #89db25;
+    border: 5px dashed #9198e5;
 
     /* 둥근 모서리 보더 : brad
     border-radius : 값
@@ -144,7 +144,7 @@ body {
 .top {
     /* 배경색 : bgc
                 background-color */
-    background-color: #e6fff2;
+    background: linear-gradient(90deg,rgba(230, 100, 101,0.3),rgba(145, 152, 229,0.3));
     /* 글자중앙정렬 tac */
     text-align: center;
 }
@@ -184,7 +184,7 @@ body {
 
     /* 6. 글자색 : c 
                 color : 해시코드/RGB/HSL/웹색상명 */
-    color: darkgreen;
+     color: #727ce7;
 }
 
 /* GNB 메뉴 a */
@@ -232,7 +232,7 @@ body {
 /* 3.하단영역 */
 .info {
     /* 배경색 */
-    background-color: #e7e7e7;
+    background: linear-gradient(90deg,rgba(230, 100, 101,0.3),rgba(145, 152, 229,0.3));
     /* 글자중앙정렬 */
     text-align: center;
 }
