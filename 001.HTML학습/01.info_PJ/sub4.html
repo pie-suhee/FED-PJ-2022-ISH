@@ -209,7 +209,187 @@
                 > 닫는 꺽쇠 &gt; (gt는 greater than ~보다 큰)
              -->
 
-            
+            <!-- 
+                [ 순서업는 리스트 : ul ]
+                unordered list
+                (참고: 블릿옵션 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_ul_type_css)
+
+                [ 순서있는 리스트 : ol ]
+                ordered list
+                (참고: 순서표시옵션 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_ol_type_all_css)
+                - start 속성 : 시작번호
+                - reverse 속성 : 일련번호를 거꾸로 진행
+
+                - 하위필수요소: list (개발리스트)
+                - 주의: 하위에 li이외의 블록요소나 그 어떤요소도 쓸 수 없다!
+             -->
+
+            <!-- 주요뉴스 ul -->
+            <article class="cnews">
+                <h3>NEWSIS 주요뉴스</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.newsis.com/view/?id=NISX20221214_0002123168" target="_blank">
+                            손흥민 아버지 "왼발 잘 쓰려고 오른쪽에 압정 꽂아"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.newsis.com/view/?id=NISX20221213_0002121312" target="_blank">
+                            안정환 아들, 중학생 맞아?…"아빠 느낌 나오네"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.newsis.com/view/?id=NISX20221213_0002121413" target="_blank">
+                            '골프여제' 박인비, 결혼 8년만에 임신
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- 랭킹뉴스 : ol  -->
+            <article class="rank">
+                <h3>랭킹뉴스</h3>
+                <ol>
+                    <li>
+                        <a href="https://n.news.naver.com/mnews/ranking/article/469/0000713738?ntype=RANKING&sid=001" target="_blank">
+                            빌라왕 정체는 '검증된 바지'... 마이바흐에 50돈 금도 …
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://n.news.naver.com/mnews/ranking/article/001/0013651723?ntype=RANKING&sid=001" target="_blank">
+                            "우리집 거실 엿본다"…40만가구 월패드 해킹해 영상 판매 …
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://n.news.naver.com/mnews/ranking/article/057/0001710400?ntype=RANKING&sid=001" target="_blank">
+                            광주 폭설 속 실종된 10대, 목욕탕서 발견…가족 품으로
+                        </a>
+                    </li>
+                </ol>
+            </article>
+
+            <!-- 
+                [ 용어정의 리스트 : dl ]
+                dl > dt + dd
+                _____________________________________
+
+                dl : 용어리스트
+                (defines the description list)
+                dt : 용어정의
+                (defines the term)
+                dd : 용어설명
+                (description each term)
+                ____________________________________
+
+                주의 - dl은 반드시 자식요소로 dt와 dd를 한번이상 사용해야한다!
+                또 주의 - dt와 dd는 형제다!
+             -->
+
+             <!-- 분야별 뉴스 -->
+             <article class="secnews">
+                <h3>분야별 뉴스</h3>
+                <dl>
+                    <dt>경제</dt>
+                    <dd>
+                        <a href="https://n.news.naver.com/mnews/article/277/0005194116?sid=101" target="_blank"> 	
+                            SK이노베이션, 'CES 2023'서 친환경 사업혁신 공개
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://n.news.naver.com/mnews/article/215/0001072492?sid=101" target="_blank">
+                            이지스운용, ‘임팩트 스테이지’ 데모데이…대상에 ‘루트릭스’
+                        </a>
+                    </dd>
+
+                    <dt>사회</dt>
+                    <dd>
+                        <a href="https://n.news.naver.com/mnews/article/366/0000863377?sid=102" target="_blank">
+                            ‘알펜시아 리프트 멈춤 사고’ 이용객 54명, 3시간 만에 전원 구조
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://n.news.naver.com/mnews/article/011/0004135548?sid=102" target="_blank">
+                            대전 도시철도 2호선, 세계 최장 무가선 트램으로 추진
+                        </a>
+                    </dd>
+
+                    <dt>생활/문화</dt>
+                    <dd>
+                        <a href="https://n.news.naver.com/mnews/article/009/0005062636?sid=103" target="_blank">
+                            아우디, 310마력 콤팩트 세단 ‘더 뉴 S3 TFSI’ 출시…5964만원
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="https://n.news.naver.com/mnews/article/018/0005390544?sid=103" target="_blank">
+                            조현래 콘진원장 "OTT 드라마 제작, 최대 30억원 지원"
+                        </a>
+                    </dd>
+                </dl>
+             </article>
+
+             <!-- 
+                [ 테이블 요소 : table ]
+                table > thead or tbody > tr > td
+                __________________________________
+
+                table : 테이블 박스 부모요소
+                tr : 테이블 행요소(table row)
+                td : 테이블 데이터 요소(table data)
+              -->
+
+            <!-- 사진뉴스 : table -->
+            <article class="pnews">
+                <h3>사진뉴스</h3>
+                <table cellpadding="0" cellspacing="0" border="1" style="width:100%;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                <a href="https://n.news.naver.com/article/001/0013651723?ntype=RANKING" target="_blank">
+                                    "우리집 거실 엿본다"…40만가구 월패드 해킹해 영상 판매 시도
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://n.news.naver.com/article/001/0013651723?ntype=RANKING" target="_blank">
+                                    <img src="./images/pn1.jpg" alt="모니터 사진">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                <a href="https://n.news.naver.com/article/001/0013651763?ntype=RANKING" target="_blank">
+                                    내일 출근길 수도권 등에 많은 눈…경기북부 최대 15cm 이상
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://n.news.naver.com/article/001/0013651763?ntype=RANKING" target="_blank">
+                                    <img src="./images/pn2.jpg" alt="겨울 행인 모습">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                <a href="https://n.news.naver.com/article/001/0013651834?ntype=RANKING" target="_blank">
+                                    제주 유명 음식점 대표 살해범, 범행 전날 아내와 배타고 제주행
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://n.news.naver.com/article/001/0013651834?ntype=RANKING" target="_blank">
+                                    <img src="./images/pn3.jpg" alt="살해범 연행 사진">
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
         </main>
         <!-- 3.하단영역 -->
         <footer class="info bx">
