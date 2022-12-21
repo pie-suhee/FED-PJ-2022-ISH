@@ -3,28 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>아카이브 페이지</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-image:url(/imgs/worksbg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        /* 전체박스 */
+        .mybox{
+            width: 1200px;
+            height: 85%;
+            margin: 4% auto;
+            border-radius: 20px;
+            background-color:rgba(255, 255, 255, 0.5);
+        }
+
+        .tit{
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>suhee의 아카이브 페이지</h1>
-    <h2>
-        <ol>
-            <li>
-                <a href="./001.HTML학습/01.info_PJ/index.html" target="_blank">
-                    Info PJ
-                </a>
-            </li>
-            <li>
-                <a href="./001.HTML학습/01.info_PJ/sub4.html" target="_blank">
-                    IT/과학 페이지
-                </a>
-            </li>
-            <li>
-                <a href="./006.와이어프레이밍/도깨비PJ_와이어프레임.pdf" target="_blank">
-                    도깨비 PJ 와이어프레이밍
-                </a>
-            </li>
-        </ol>
-        
-    </h2>
+    <div class="mybox">
+        <h1 class="tit">
+            <img src="./imgs/mylogo_14.png" alt="나의로고">
+            <br>
+            suhee의 아카이브 페이지
+        </h1>
+
+        <h2>
+            <ol>
+                <li>
+                    <a href="./001.HTML학습/01.info_PJ/index.html" target="_blank">
+                        Info PJ
+                    </a>
+                </li>
+                <li>
+                    <a href="./001.HTML학습/01.info_PJ/sub4.html" target="_blank">
+                        IT/과학 페이지
+                    </a>
+                </li>
+                <li>
+                    <a href="./006.와이어프레이밍/도깨비PJ_와이어프레임.pdf" target="_blank">
+                        도깨비 PJ 와이어프레이밍
+                    </a>
+                </li>
+            </ol>
+        </h2>
+    </div>
+    
 </body>
 </html>
