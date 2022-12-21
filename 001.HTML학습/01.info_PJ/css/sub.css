@@ -113,4 +113,28 @@
     padding: 5px;
     margin: 15px 0;
 }
-/* 2-6.기사원문 */
+/*
+    2-6.기사원문 
+    별도의 이름없이 구조로만 기사원문을 선택한다! 직게자식!
+*/
+.cont > h5{
+    text-align: right;
+}
+.cont > h5 a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #cccccc;
+    text-align: center;
+    line-height: 70px;
+    box-sizing: border-box;
+    background-color: #9198e5;
+    color: #ffffff;
+}
+/* 가상클래스로 오버시 박스그림자 넣기 */
+.cont > h5 a:hover{
+    box-shadow: 0 0 5px #6a74eb;
+}
