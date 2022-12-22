@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>001.배경연습</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* 
+                기본 높이값을 안주면 height: auto이므로
+                내용만큼 늘어남! 당연!!
+                보이는 화면을 기준하여 높이값을 셋팅할 때 많이 사용됨!
+                최상위 html 요소가 보이는 화(window)을 기준하여 높이를 채우고 그것을 기준하여 body가 100%로 높이를 채움!
+            */
+        }
+
+        body{
+            background-color: pink;
+            background-image: url(/006.와이어프레이밍/images/bg_logo_a_01.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: right bottom;
+            background-size: 200px auto;
+            /* 
+                [배경 한번에 셋팅하기!]
+                background: 색 이미지 반복 고정 위치/크기;
+            */
+        }
+
+        /* body 아래 .wrap박스 */
+        .wrap {
+            height: 100%;
+            /* body크기에 맞춤! */
+
+            /* 
+                background: 색이반고윙/크로 다중이미지를 셋팅한다! 
+                중간에 콤마로 구분하여 여러 이미지를 셋팅함!
+            */
+            background: url(/006.와이어프레이밍/images/dc1.png) no-repeat center/400px, 
+            url(/006.와이어프레이밍/images/dc2.png) no-repeat right top/auto 150px,
+            url(/006.와이어프레이밍/images/dc3.png) no-repeat left bottom/300px,
+            url(/006.와이어프레이밍/images/dc4.png) no-repeat right/250px,
+            url(/006.와이어프레이밍/images/bg_mainvisual.jpg) no-repeat 0/50%;
+        }
+        /* 배경위치는 먼저쓴것이 위에 온다! */
+
+        h1 {
+            margin: 0;
+            /* 
+                블록요소 안에 첫번째 블록 자식요소의 마진 탑과 마진 바텀은 부모요소 바깥으로 나가서 표현된다!!!
+                body>div.wrap>h1 자식의 자식인데도 마진탑이 바깥으로 나가서 body가 위로부터 밀려나 있어서 스크롤바가 생김!
+                따라서 내부 여백은 일반적으로 부모요소의 패딩으로 주도록 하자!
+                (>>> 유모차 아이가 유모차 바깥으로 손을 내밀어 밀때 부모도 같이 밀린다!)
+            */
+            padding: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>001.배경넣기 연습</h1>
+    </div>
+</body>
+
+</html>

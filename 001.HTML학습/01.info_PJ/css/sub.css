@@ -204,6 +204,11 @@
     font-size: 17px;
     line-height: 2.5;
     letter-spacing: -1px;
+    display: block;
+    width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cont article a:hover {
@@ -284,7 +289,7 @@
 }
 
 .pnews h3::before {
-    
+    content: '📷';
 }
 
 /* 사진뉴스 테이블박스 */
