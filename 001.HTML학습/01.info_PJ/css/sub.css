@@ -84,6 +84,7 @@
     letter-spacing: 1px;
     /* 글자 들여쓰기 ti 값 : 양수는 들여쓰기, 음수는 내어쓰기 */
     /* text-indent: 20px; */
+    text-align: justify;
 }
 /* mark요소 변경하기! */
 .arti p mark{
@@ -135,6 +136,199 @@
     color: #ffffff;
 }
 /* 가상클래스로 오버시 박스그림자 넣기 */
-.cont > h5 a:hover{
+.cont > h5 a:hover {
     box-shadow: 0 0 5px #6a74eb;
+}
+
+/* 메인 공통 article 박스 디자인 */
+.cont > article {
+    border-top: 2px dashed rgb(172, 135, 240);
+    margin-top: 40px;
+    padding: 15px;
+}
+
+/* 각 파트별 공통 타이틀 */
+.cont h3 {
+    font-family: 'ONE-Mobile-POP';
+    font-size: 26px;
+    font-weight: normal;
+    text-indent: 20px;
+    color: #333;
+}
+
+.cont > article > h5 {
+    font-weight: normal;
+    font-size: 20px;
+    color: #333;
+    display: inline-block;
+    background-color: rgba(251, 186, 246, 0.2);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0;
+    box-shadow: inset 0 0 5px #6a74eb;
+}
+
+.desc div {
+    padding: 20px 5px 0;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.qb blockquote {
+    margin: 0;
+    padding: 20px 5px 0;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-size: 14px;
+}
+
+/* 오늘의 작품 & 느낌 */
+.work {
+    text-align: center;
+    background: linear-gradient(180deg,rgba(230, 100, 100,0.5),rgba(244, 197, 67,0.5));
+    background-clip: content-box;
+}
+
+.work figcaption {
+    font-family: 'Jua', sans-serif;
+}
+
+.work figcaption cite {
+    font-style: normal;
+}
+
+.work img {
+    border: 15px ridge #d48302;
+}
+.cont article a:not(.a_img) {
+    font-size: 17px;
+    line-height: 2.5;
+    letter-spacing: -1px;
+}
+
+.cont article a:hover {
+    color: rgb(235, 159, 250);
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+.cont article ul {
+    list-style-type: "👍";
+    /* 
+        square 사각형, disc 원형, circle 반원
+        -> 따옴표안에 다른 문자형을 넣을 수 있음
+        -> 윈도우키+점(.) -> 아이콘 넣기
+     */
+}
+
+.cont article ul li:nth-child(3n+1) a {
+    color:#6a74eb;
+}
+
+.cont article ul li:nth-child(3n+2) a {
+    color:#ba6aeb;
+}
+
+.cont article ul li:nth-child(3n) a {
+    color:#eb6a95;
+}
+.cont article ul li,
+.cont article ol li {
+    padding-left: 10px;
+}
+
+.cont article ol {
+    list-style-type: upper-roman;
+}
+
+/* 
+    [ CSS 적용 우선순위 ] 
+    type < class < id < inline < !important
+    
+    -> 더 쎈 선택자이여도 부모요소를 업고 
+*/
+
+/* 분야별 뉴스 */
+.secnews dl dt {
+    font-family: 'ONE-Mobile-POP';
+    display: inline-block;
+    border: 3px dotted rgb(76, 3, 107);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-left: 20px;
+    box-shadow: 0 0 5px rgba(97, 5, 189, 0.5);
+}
+
+.secnews dl dt:nth-of-type(1) {
+    color: #6a74eb;
+}
+
+.secnews dl dt:nth-of-type(2) {
+    color:#ba6aeb;
+}
+
+.secnews dl dt:nth-of-type(3) {
+    color:#eb6a95;
+}
+
+.secnews dl dd+dt {
+    margin-top: 15px;
+}
+
+.secnews dl dd {
+    margin-left: 100px;
+}
+
+.pnews h3 {
+    text-align: center;
+}
+
+.pnews h3::before {
+    
+}
+
+/* 사진뉴스 테이블박스 */
+.pnews table {
+    border: 1px solid #000;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+/* 첫번째 td - 숫자부분 */
+.pnews td:first-child{
+    width: 50px;
+    height: 70px;
+    text-align: center;
+    background-color: rgba(176, 114, 253, 0.2);
+}
+
+.pnews td:nth-child(2) {
+    background-color: rgba(234, 216, 249, 0.1);
+    padding: 0 20px;
+}
+
+.pnews td:nth-child(3) {
+    background-color: rgba(234, 216, 249, 0.6);
+    padding: 7px;
+}
+
+.pnews table img {
+    width: 250px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* 앞에 tr이 있는 tr만 하위 td에 디자인 */
+.pnews tr+tr td {
+    border-top: 2px solid #ccc;
+}
+
+.cont .pnews a{
+    font-size: 14px;
+    line-height: 1.5;
+}
+.cont .pnews .a_img {
+    display: block;
+    width: 100%;
+    height: 100%;
 }

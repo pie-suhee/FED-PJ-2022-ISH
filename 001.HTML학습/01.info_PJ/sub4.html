@@ -60,7 +60,6 @@
             <figure class="afig">
                 <img src="./images/arti4.jpg" alt="과학기사사진" />
                 <!-- 이미지설명 -->
-                <figcaption>
                     <small>
                         한국의 첫 달 궤도선 '다누리' 상상도.
                         (사진=한국항공우주연구원)
@@ -154,16 +153,18 @@
             </section>
 
             <!-- 구분선 : hr -->
-            <hr>
+            <!-- hr -->
             <article class="desc">
                 <h5>주해</h5>
-                ① 다누리는 한국항공우주연구원이 개발하여 2022년 8월 5일에 발사한 대한민국 최초의 달 궤도 탐사선이다. 달 궤도를 돌며 달을 탐사하는 것을 목표로 한다. 성공한다면 대한민국은 세계 7번째 달 탐사국 반열에 오른다.
-                <br>
-                <!-- break 요소 : 인라인 줄바꿈요소 -->
-                ② 지구에 가장 가까운 위성이자 우주적 생명력의 전형으로 믿어진 종교상징물. 달이 태양과 같은 방향에 있을 때는 지구가 달의 그늘을 향하게 되므로 안 보인다.
+                <div>
+                    ① 다누리는 한국항공우주연구원이 개발하여 2022년 8월 5일에 발사한 대한민국 최초의 달 궤도 탐사선이다. 달 궤도를 돌며 달을 탐사하는 것을 목표로 한다. 성공한다면 대한민국은 세계 7번째 달 탐사국 반열에 오른다.
+                    <br>
+                    <!-- break 요소 : 인라인 줄바꿈요소 -->
+                    ② 지구에 가장 가까운 위성이자 우주적 생명력의 전형으로 믿어진 종교상징물. 달이 태양과 같은 방향에 있을 때는 지구가 달의 그늘을 향하게 되므로 안 보인다.
+                </div>
             </article>
 
-            <hr>
+            <!-- hr -->
 
             <!-- 이용블록 영역 -->
             <article class="qb">
@@ -175,7 +176,7 @@
                 </blockquote>
             </article>
 
-            <hr>
+            <!-- hr -->
 
             <!-- 2-5.기자정보 -->
             <div class="rpt">윤현성 기자(hsyhs@newsis.com)</div>
@@ -186,7 +187,7 @@
                 </a>
             </h5>
 
-            <hr>
+            <!-- hr -->
 
             <!-- 오늘의 작품 & 느낌 -->
             <article class="work">
@@ -223,7 +224,7 @@
 
             <!-- 주요뉴스 ul -->
             <article class="cnews">
-                <h3>NEWSIS 주요뉴스</h3>
+                <h3>주요뉴스</h3>
                 <ul>
                     <li>
                         <a href="https://www.newsis.com/view/?id=NISX20221214_0002123168" target="_blank">
@@ -326,7 +327,11 @@
 
              <!-- 
                 [ 테이블 요소 : table ]
-                table > thead or tbody > tr > td
+                table > thead or tbody > tr > td-
+
+                -> tbody는 안써도 브라우저가 그려준다!
+                -> 직계자식으로 선택할 경우
+                table > tr 로 선택하면 적용되지 않는 이유가 바로 이것이다!!
                 __________________________________
 
                 table : 테이블 박스 부모요소
@@ -337,7 +342,7 @@
             <!-- 사진뉴스 : table -->
             <article class="pnews">
                 <h3>사진뉴스</h3>
-                <table cellpadding="0" cellspacing="0" border="1" style="width:100%;">
+                <table>
                     <tbody>
                         <tr>
                             <td>
@@ -345,11 +350,12 @@
                             </td>
                             <td>
                                 <a href="https://n.news.naver.com/article/001/0013651723?ntype=RANKING" target="_blank">
-                                    "우리집 거실 엿본다"…40만가구 월패드 해킹해 영상 판매 시도
+                                    "우리집 거실 엿본다"…<br>
+                                    40만가구 월패드 해킹해 영상 판매 시도
                                 </a>
                             </td>
                             <td>
-                                <a href="https://n.news.naver.com/article/001/0013651723?ntype=RANKING" target="_blank">
+                                <a href="https://n.news.naver.com/article/001/0013651723?ntype=RANKING" class="a_img" target="_blank">
                                     <img src="./images/pn1.jpg" alt="모니터 사진">
                                 </a>
                             </td>
@@ -360,11 +366,12 @@
                             </td>
                             <td>
                                 <a href="https://n.news.naver.com/article/001/0013651763?ntype=RANKING" target="_blank">
-                                    내일 출근길 수도권 등에 많은 눈…경기북부 최대 15cm 이상
+                                    내일 출근길 수도권 등에 많은 눈…<br>
+                                    경기북부 최대 15cm 이상
                                 </a>
                             </td>
                             <td>
-                                <a href="https://n.news.naver.com/article/001/0013651763?ntype=RANKING" target="_blank">
+                                <a href="https://n.news.naver.com/article/001/0013651763?ntype=RANKING" class="a_img" target="_blank">
                                     <img src="./images/pn2.jpg" alt="겨울 행인 모습">
                                 </a>
                             </td>
@@ -375,11 +382,12 @@
                             </td>
                             <td>
                                 <a href="https://n.news.naver.com/article/001/0013651834?ntype=RANKING" target="_blank">
-                                    제주 유명 음식점 대표 살해범, 범행 전날 아내와 배타고 제주행
+                                    제주 유명 음식점 대표 살해범,<br>
+                                    범행 전날 아내와 배타고 제주행
                                 </a>
                             </td>
                             <td>
-                                <a href="https://n.news.naver.com/article/001/0013651834?ntype=RANKING" target="_blank">
+                                <a href="https://n.news.naver.com/article/001/0013651834?ntype=RANKING" class="a_img" target="_blank">
                                     <img src="./images/pn3.jpg" alt="살해범 연행 사진">
                                 </a>
                             </td>
@@ -429,9 +437,7 @@
             2) 윗첨자 <sup> 
                 - 약간윗쪽 작은글자 (Superscript text) 
                 - 주석표시숫자(숫자와 설명을 연결)
-            
 
-            [ 2. 인용관련요소 ]
             1. 블록인용요소
                 <blockquote> 
                 - 블록요소로 별도의 인용구를 구분하는 박스
