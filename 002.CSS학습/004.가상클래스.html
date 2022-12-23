@@ -70,9 +70,179 @@
         참고) 탭키를 눌러서 a요소의 포커스를 이동시킬 수 있음
 
     */
+    
+        h1,h2 {
+            text-align: center;
+        }
 
+        h2 a{
+            color:#ff0000;
+        }
 
+        h2 a:link {
+            color: #ff0000;
+            text-decoration: none;
+        }
 
+        h2 a:hover {
+            color: #239523;
+            text-decoration: overline;
+            text-decoration-style: wavy;
+        }
+
+        /* h2 a:visited {
+            color: #7878f9;
+        } */
+
+        h2 a:active {
+            color: #fca6a6;
+            text-shadow: 1px 1px 2px #f90202
+        }
+
+        h2 a:focus {
+            /* 
+                외각선 : outline
+                값 : 두께 종류 색상 (border와 유사)
+                -> 보더와 차이점은 주변에 영향을 주지 않는다.
+                -> 박스기본구성 속성 아님
+                -> 입력창 포커스갈 때 아웃라인 표시 등
+            */
+            outline : 2px dotted #f3c634;
+        }
+
+        h3 {
+            width: 800px;
+            margin: 0 auto;
+            text-align: right;
+        }
+
+        ul,ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul.part1, div.part2 {
+            width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        /* 
+            [ font 한번에 셋팅하기! ]
+            font : 스타일 두께 크기/줄간격 글자체
+        */
+
+        .part1 li {
+            cursor: pointer;
+        }
+
+        .part1 li:first-child {
+            font-size: 40px;
+            font-family: "궁서";
+            color: #ff0000;
+        }
+
+        .part1 li:first-child:hover {
+            font-size: 50px;
+            color: #9745e3;
+        }
+
+        .part1 li:nth-child(2) {
+            font-size: 30px;
+            font-family: "굴림";
+            font-weight: bold;
+            color: #fb8888;
+        }
+
+        .part1 li:nth-child(3) {
+            font-size: 24px;
+            font-family: "돋움";
+            color: #764210;
+        }
+
+        .part1 li:nth-child(3):hover {
+            font-style: normal;
+        }
+
+        .part1 li:nth-child(4) {
+            font-size: 50px;
+            font-family: "궁서";
+            color: #348edc;
+        }
+
+        .part1 li:nth-child(4):hover {
+            background-color: rgba(243, 198, 52, 0.5);
+        }
+
+        .part1 li:nth-child(4) b {
+            display: none;
+        }
+
+        .part1 li:nth-child(4) span {
+            display: inline;
+        }
+
+        .part1 li:nth-child(4):hover b {
+            display: inline;
+        }
+
+        .part1 li:nth-child(4):hover span {
+            display:none;
+        }
+
+        /*
+            틸드(~)는 다중형제선택
+            선택요소~요소명
+            -> 선택요소 뒤에 있는
+            모든 형제 요소를 선택함! 
+         */
+        .part1 li:nth-child(4)~li {
+            font-size: 25px;
+            color: #f05731;
+            font-family: "궁서";
+        }
+
+        .part1 li:nth-child(4)~li:hover {
+            font-size: 28px;
+            color: #5a7def;
+        }
+
+        body .part1 li:last-child {
+            font-size: 40px;
+            font-family: "맑은 고딕";
+            color: #fb8888;
+        }
+
+        .part2 div:nth-of-type(2) {
+            font-size: 30px;
+            color: #9745e3;
+        }
+
+        .part2 i:first-of-type {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fb8888;
+        }
+
+        /* .part2 div:nth-of-type(3)~div {
+            font-family: "궁서";
+            color: #ff0000
+        } */
+
+        /* .part2 div:nth-of-type(3)~i {
+            font-family: "궁서";
+            color: #ff0000
+        } */
+
+        .part2 div:nth-of-type(3)~* {
+            font-family: "궁서";
+            color: #ff0000
+        }
         /* 
         [ CSS 선택자 우선순위 ]
 
