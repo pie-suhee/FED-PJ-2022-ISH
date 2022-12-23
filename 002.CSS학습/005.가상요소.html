@@ -52,9 +52,29 @@
 
              */
         /* h2요소 맨앞에 이미지 넣기 */
-        
+        h2::before {
+            content: url(/006.와이어프레이밍/images/blogo.png);
+            
+            /* 마진적용 */
+            margin-right: 20px;
+
+            /* 인라인요소간 세로정렬 */
+            vertical-align: top;
+        }
 
         /* 맨뒤 추가요소 ::after */
+        h2::after {
+            content:"";
+            display: inline-block;
+            width: 40px;
+            height: 60px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background: url(/006.와이어프레이밍/images/bg_logo_a_01.png) no-repeat center/80%;
+            box-shadow: 0 0 10px rgb(250, 115, 225), 10px 10px 5px 2px rgba(34, 34, 34, 0.5);
+            vertical-align: middle;
+            margin-left: 20px;
+        }
         
 
 
@@ -67,34 +87,72 @@
             margin-left: 50px;
         }
 
+        dt {
+            margin: 25px 0 15px;
+        }
+
         /* 반복되는 요소의 앞에 아이콘 가상요소로 넣기 */
+
+        dt::before {
+            content:"🎪";
+            font-size: 30px;
+            color: red;
+            vertical-align: 2px;
+        }
         
 
         /* dd전체와 
         dd.story>h3에 가상요소 before적용하기 */
-        
+        dd::before, dd.story>h3::before {
+            content:"😍";
+        }
 
 
         /* 출연배우의 dd부터 아이콘변경 */
+        dt:nth-of-type(2)~dd::before {
+            content:"🤩";
+        }
         
         /* 아티스트의 dd부터 아이콘변경 */
+        dt:nth-of-type(3)~dd::before {
+            content:"🥰";
+        }
         
 
         /* 스토리의 dd는 가상요소 없애기 */
+        dd.story::before {
+            display: none;
+        }
         
         /* 스토리의 dd 아래 h3 이모지변경 */
+        dd.story>h3::before {
+            content:"😁";
+        }
         
 
         /* .story의 첫번째 p태그의 첫번째 글자 디자인 변경하기 */
+        dd.story>p:nth-of-type(1)::first-letter {
+            font-size: 50px;
+            color: #f190be;
+            font-weight: bold;
+        }
         
 
         /* .story의 첫번째 p태그의 첫번째줄 디자인 변경하기 */
-        
+        dd.story>p:nth-of-type(1)::first-line {
+            font-size: 50px;
+            color: #f190be;
+            font-weight: bold;
+        }
 
 
 
         /* 두번째 p태그는 태그로 
         첫번째 글자(b태그), 첫번째 줄(span)변경 */
+        dd.story>p:nth-of-type(2) b {
+            font-size: 50px;
+            color: #f190be;
+        }
         
 
         /* 기타 가상요소 ::selection */
