@@ -17,10 +17,14 @@ body {
 }
 
 /********* 메인영역 *********/
+.cont {
+    overflow: hidden;
+}
 
 .cbx {
     width: 90%;
     margin: 0 auto;
+    margin-top: 470px;
 }
 
 .cbx:after {
