@@ -5,7 +5,11 @@
 body {
     width: 100vw;
     height: 600vh;
-    background-color: orange;
+	background-image: url(../img/tree_bg.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -15,10 +19,10 @@ body::-webkit-scrollbar {
 }
 
 .slide_section {
+	width: 100%;
 	height: 22vh;
 	bottom: 0;
 	position: fixed;
-	width: 100%;
 }
 
 .slide_section > .contents_con {
@@ -47,7 +51,7 @@ body::-webkit-scrollbar {
 .slide_section > .contents_con > .img_con > img {
     width: 100%;
 	pointer-events: none;
-	z-index: 999;
+	z-index: 100;
 	cursor: pointer;
 }
 
