@@ -157,6 +157,13 @@
             height 1s ease-in 2s,
             background-color 3s linear 3s;
         }
+
+        #tr4:hover span {
+            left: 70%;
+            width: 500px;
+            height: 300px;
+            background-color: royalblue;
+        }
         
         
     </style>
@@ -181,9 +188,25 @@
     </div>
 
     <h2>4.원본에 트랜지션을 각 속성별로 다르게 준다</h2>
-    <div id="tr4">        
+    <div id="tr4"> 
+        <label for="chkbx">체크하면 작동!</label>
+        <input type="checkbox" name="chkbx" id="chkbx">     
         <span></span>
     </div>
+
+    <!-- 
+        [ 체크박스를 응용한 클릭이벤트 작동 CSS로 구현 ]
+        label 요소 : input 입력요소의 네임태그이며 서로 for 속성으로 연결됨
+                    for의 값은 input 요소의 id값이다!
+        input 요소 : 여러종류의 입력양식이 있음
+                    checkbox -> 체크박스형식
+                    text -> 글자입력형식
+                    password -> 비번입력형식
+                    radio -> 라디오버튼형식
+            -> name 속성은 무엇? 백엔드에서 값을 읽어갈 때
+                기본적으로 name속성의 값으로 읽어간다! 필수셋팅!
+            -> id 속성은 label의 for와 연결하므로 필수셋팅!
+     -->
 </body>
 
 </html>
