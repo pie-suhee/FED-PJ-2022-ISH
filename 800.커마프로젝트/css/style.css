@@ -27,7 +27,7 @@ a {
 body {
     width: 100vw;
     height: 100vh;
-    background: url(../ab_img/space.jpg) no-repeat fixed center/cover;
+    background: url(../ab_img/tree_bg.png) no-repeat fixed center/cover;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -58,20 +58,20 @@ body::-webkit-scrollbar {
 .abx {
     width: 300px;
     height: 400px;
-    background: url(../ab_img/ab0.jpg) no-repeat center/cover;
+    background: url(../ab_img/artist_parkeunbin01.jpg) no-repeat center/cover;
     border-radius: 50%;
     margin: 0 auto;
     box-shadow: 0 0 70px 20px #fefde5, inset 0 0 30px #fcefc4;
     position: relative;
-    top: 210px;
+    top: 310px;
 }
 
 .cbx {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 190px;
     position: absolute;
-    top: calc(50% - 75px);
-    left: calc(50% - 75px);
+    top: calc(50% - 95px);
+    left: calc(50% - 70px);
 
     transition: .8s ease-in-out;
     opacity: 0;
@@ -89,33 +89,28 @@ body:hover .cbx {
     opacity: 1;
 }
 
-/* 2-1. 아이언맨 */
+/* 2-1. 강기영 */
 body:hover .cbx:nth-child(1) {
-    top: -10%;
+    top: -5%;
     left: -90%;
 }
 
-/* 2-2. 타노스 */
+/* 2-2. 김환희 */
 body:hover .cbx:nth-child(2) {
-    top: -10%;
+    top: -5%;
     left: 135%;
 }
 
-/* 2-3. 토르 */
+/* 2-3. 김재경 */
 body:hover .cbx:nth-child(3) {
     top: 70%;
     left: -90%;
 }
 
-/* 2-4. 닥스 */
+/* 2-4. 구교환 */
 body:hover .cbx:nth-child(4) {
     top: 70%;
     left: 135%;
-}
-
-/* 2-5. 스타로드 */
-body:hover .cbx:nth-child(5) {
-    top: 130%;
 }
 
 /* 캐릭터 설명박스 공통 */
@@ -142,12 +137,12 @@ body:hover .cbx:nth-child(5) {
 }
 
 .cd.ltxt {
-    left: -240%;
+    left: -250%;
     text-align: right;
 }
 
 .cd.rtxt {
-    right: -240%;
+    right: -250%;
 }
 
 /* 예고편 페이지 */
@@ -183,7 +178,7 @@ body:hover .cbx:nth-child(5) {
     bottom: 2%;
 }
 
-#pg1 .gobtn::after {
+#pg1 .gobtn:hover::after {
     content:"👇";
 }
 
@@ -191,12 +186,6 @@ body:hover .cbx:nth-child(5) {
     top: 2%;
 }
 
-#pg2 .gobtn::after {
+#pg2 .gobtn:hover::after {
     content:"👆";
-}
-
-.gobtn:hover {
-    color: hotpink;
-    text-decoration: overline;
-    text-decoration-style: wavy;
 }
