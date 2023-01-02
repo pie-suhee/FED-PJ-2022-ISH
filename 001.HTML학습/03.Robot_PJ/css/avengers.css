@@ -1,2 +1,33 @@
 @charset "utf-8";
 /* 어벤저스 CSS - avengers.css */
+
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Single+Day&display=swap');
+
+/* 
+    font-family: 'Monoton', cursive;
+    font-family: 'Single Day', cursive;
+*/
+
+html, body, h1, h2, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* 초기셋팅 */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body {
+    background: url(../ab_img/space.jpg) no-repeat fixed center/cover;
+}
+
+/* 1. 전체 타이틀 */
+.tit {
+    font-family: 'Monoton', cursive;
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: normal;
+}
