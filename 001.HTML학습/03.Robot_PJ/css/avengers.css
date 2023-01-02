@@ -40,4 +40,20 @@ body {
     background: url(../ab_img/ab0.jpg) no-repeat center/cover;
     border-radius: 50%;
     margin: 0 auto;
+    box-shadow: 0 0 70px 20px #fefde5, inset 0 0 30px #fcefc4;
+}
+
+.cbx {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+}
+
+.cbx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 50%;
+    box-shadow: 0 0 30px #f8ffa5;
 }
