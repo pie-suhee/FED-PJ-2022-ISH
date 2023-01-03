@@ -212,6 +212,12 @@ body:hover .cbx:nth-child(5){
     transition: .4s ease-out;
 }
 
+.cbx a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .cd h2{
     /* 글자셋팅 */
     font-family: 'Bodoni Moda', serif;
