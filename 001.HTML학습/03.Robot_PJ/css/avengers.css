@@ -48,6 +48,13 @@ body::-webkit-scrollbar {
     text-align: center;
     padding: 50px 0;
     z-index: 100;
+
+    transform: translateY(-200px) rotateX(90deg) scale(0);
+    transition: transform 3s ease-in-out .5s;
+}
+
+body:hover .tit {
+    transform: translateY(0) rotateX(720deg) scale(1);
 }
 
 .page {
@@ -87,6 +94,7 @@ body::-webkit-scrollbar {
 
 body:hover .cbx {
     opacity: 1;
+    transform: rotateY(720deg);
 }
 
 /* 2-1. 아이언맨 */

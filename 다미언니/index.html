@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>playlist</title>
+        <!-- 파비콘 : 탭메뉴 표시 아이콘 이미지 -->
+        <link rel="shortcut icon" href="./playlist_img/headphone.png"/>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <!-- 0. 전체 타이틀 -->
+        <h1 class="tit">Music makes our daily lives happier !</h1>
+
+        <!-- 1-1. main -->
+        <div class="page" id="pg1">
+            <!-- 2. playlist box -->
+            <section class="abx">
+                <!-- 2-1. citypop -->
+                <div class="cbx">
+                  <a href=#pg2-1><img src="./playlist_img/citypop.webp" alt="citypop"/></a>
+                    <!-- 소개글박스 -->
+                    <article class="cd ltxt">
+                        <div>
+                            <h2>City pop</h2>
+                            <p>비 오는 날, 하카타역에서 듣는<br/>그루브한 신스팝&시티팝</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- 2-2. carol -->
+                <div class="cbx">
+                  <a href=#pg2-2><img src="./playlist_img/carol2.webp" alt="carol"/></a>
+                    <!-- 소개글박스 -->
+                    <article class="cd rtxt">
+                        <div>
+                            <h2>Carol</h2>
+                            <p>같이 크리스마스트리 만들 사람?</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- 2-3. indie -->
+                <div class="cbx">
+                  <a href=#pg2-3><img src="./playlist_img/indie.webp" alt="indie"/></a>
+                    <!-- 소개글박스 -->
+                    <article class="cd ltxt">
+                        <div>
+                            <h2>Indie</h2>
+                            <p>카페에서 훔쳐온 노래</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- 2-4. trendyhiphop -->
+                <div class="cbx">
+                  <a href=#pg2-4><img src="./playlist_img/trendyhiphop.webp" alt="trendyhiphop"/></a>
+                    <!-- 소개글박스 -->
+                    <article class="cd rtxt">
+                        <div>
+                            <h2>Trendy Hiphop</h2>
+                            <p>느낌있는 파티룸으로 만들어주는<br/>트렌디 힙합</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- 2-5. indiepop -->
+                <div class="cbx">
+                  <a href=#pg2-5><img src="./playlist_img/indiepop.webp" alt="indiepop"/></a>
+                    <!-- 소개글박스 -->
+                    <article class="cd mtxt">
+                        <div>
+                            <h2>Indiepop</h2>
+                            <p>유후인 가는 기차에서 듣는<br/>몽환적인 인디팝</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- 1-2. playlist page -->
+        <div class="page" id="pg2-1">
+            <h2 class="subtit">Rainy Day Groove Pop Playlist</h2>
+            <div class="mvbx">
+                <iframe src="https://www.youtube.com/embed/Q-0KUYcPFd4" title="Rainy Day Groove Pop Playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- 
+                    [ 아이프레임 : iframe (inline frame) ]
+                    -> 외부 시스템/페이지를 기존 페이지에
+                    불러와서 디스플레이해주는 프레임 요소
+                    -> 동영상 페이지(유튜브 등), 다른 페이지를
+                    한 페이지에서 모두 보여줄때 등 활용됨
+                    -> 필수속성: src -> 페이지 경로값을 셋팅함
+                    -> 유의사항: width, height, border 를 CSS에서
+                    모두 셋팅할 것을 권고함!
+                 -->
+        </div>
+          <!-- 홈 이동버튼 -->
+          <a href="#pg1" class="gobtn"><span>Ray Back</span><b><img src="./playlist_img/profile.jpg" alt="profiiebtn"></b></a>
+
+        <div class="page" id="pg2-2">
+            <h2 class="subtit">Christmas Party Playlist</h2>
+            <div class="mvbx">
+                <iframe src="https://www.youtube.com/embed/hLOMjImkH50" title="Christmas Party Playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+          <!-- 홈 이동버튼 -->
+          <a href="#pg1" class="gobtn"><span>Ray Back</span><b><img src="./playlist_img/profile.jpg" alt="profiiebtn"></b></a>
+
+        <div class="page" id="pg2-3">
+            <h2 class="subtit">Indie Playlist</h2>
+            <div class="mvbx">
+                <iframe src="https://www.youtube.com/embed/sxbdgSdk6sA" title="Indie Playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+          <!-- 홈 이동버튼 -->
+          <a href="#pg1" class="gobtn"><span>Ray Back</span><b><img src="./playlist_img/profile.jpg" alt="profiiebtn"></b></a>
+
+        <div class="page" id="pg2-4">
+            <h2 class="subtit">Trendy Hiphop Playlist</h2>
+            <div class="mvbx">
+                <iframe src="https://www.youtube.com/embed/K6N8Z3WU2oU" title="Trendy Hiphop Playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+          <!-- 홈 이동버튼 -->
+          <a href="#pg1" class="gobtn"><span>Ray Back</span><b><img src="./playlist_img/profile.jpg" alt="profiiebtn"></b></a>
+
+    <div class="page" id="pg2-5">
+        <h2 class="subtit">Indie Pop Playlist</h2>
+          <div class="mvbx">
+            <iframe src="https://www.youtube.com/embed/jZBqU33f49M" title="Indie Pop Playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+        <!-- 홈 이동버튼 -->
+        <a href="#pg1" class="gobtn"><span>Ray Back</span><b><img src="./playlist_img/profile.jpg" alt="profiiebtn"></b></a>
+    </div>
+  </body>
+</html>

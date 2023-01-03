@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>트랜스폼 기본 사용법</title>
+    <style>
+        body {
+            background: url(./images/bg-main.jpg) no-repeat fixed center top/cover;
+        }
+
+        .tit {
+            border-radius: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            
+            color: #ffffff;
+            font-size: 50px;
+            line-height: 100px;
+            text-shadow: 
+            2px 0 #000000, 
+            -2px 0 #000000, 
+            0 2px #000000,
+            0 -2px #000000;
+        }
+
+        .cont {
+            max-width: 1500px;
+            border: 10px solid lime;
+            border-radius: 20px;
+            margin: 100px auto;
+            padding: 50px;
+        }
+
+        .cont > div {
+            float: left;
+            width: 20%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cont > div > img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            transition: .6s;
+        }
+
+        .cont:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        #trans1:hover img {
+            transform: rotateY(180deg);
+            filter: grayscale(100%);
+        }
+
+        #trans2 img {
+            transform: rotateX(180deg);
+            filter: blur(2px);  
+        }
+
+        #trans2:hover img {
+            transform: rotateX(0);
+            filter: blur(0);
+        }
+
+        #trans3:hover img {
+            transform: translateX(-50%);
+        }
+
+        #trans4:hover img {
+            transform: translateY(200%);
+        }
+
+        #trans5:hover img {
+           transform: translate(-120px, 100px);
+        }
+
+        #trans6 img {
+            transform-origin: 50px 170px;
+        }
+
+        #trans6:hover img {
+           transform: rotate(5478deg);
+           transition-duration: 10s;
+           /* 
+            transition-property: 속성;
+            transition-duration: 시간;
+            transition-timing-function: 이징(가속도);
+            transition-delay: 지연 시간; 
+           */
+        }
+
+        #trans7:hover img {
+           transform: skew(-30deg);
+        }
+
+        #trans8 img {
+           transform: scale(0);
+        }
+
+        #trans8:hover img {
+           transform: scale(2);
+        }
+
+        #trans9:hover img {
+           transform: scale(5) translate(-200%,-100%) rotateX(1200deg) skewX(50deg) rotate(5300deg);
+           transition-duration: 20s;
+        }
+
+        #trans10 {
+            width: 250px;
+            height: 250px;
+            outline: 2px dashed lime;
+            text-align: left;
+        }
+
+        #trans10 img {
+            position: absolute;
+        }
+
+        #trans10 img:nth-child(1) {
+            transform: rotateY(90deg);
+            transition: .4s ease-out;
+        }
+
+        #trans10:hover img:nth-child(1) {
+            transform: rotateY(0);
+            transition: .4s ease-in .4s;
+        }
+
+        #trans10 img:nth-child(2) {
+            transform: rotateY(0);
+            transition: .4s ease-out .4s;
+        }
+
+        #trans10:hover img:nth-child(2) {
+            transform: rotateY(90deg);
+            transition: .4s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="tit">트랜스폼 연습</h1>
+    <div class="cont">
+        <div id="trans1">
+            <img src="./images/cast01.jpg" alt="캐릭터">
+        </div>
+
+        <div id="trans2">
+            <img src="./images/cast02.jpg" alt="캐릭터">
+        </div>
+
+        <div id="trans3">
+            <img src="./images/cast03.jpg" alt="캐릭터">
+        </div>
+
+        <div id="trans4">
+            <img src="./images/cast04.jpg" alt="캐릭터">
+        </div>
+
+        <div id="trans5">
+            <img src="./images/cast05.jpg" alt="캐릭터">
+        </div>
+
+        <div id="trans6">
+            <img src="./images/cast01.jpg" alt="캐릭터">
+        </div>
+
+        <div id="trans7">
+            <img src="./images/cast02.jpg" alt="캐릭터">
+        </div>
+
+        <div id="trans8">
+            <img src="./images/cast03.jpg" alt="캐릭터">
+        </div>
+
+        <div id="trans9">
+            <img src="./images/cast04.jpg" alt="캐릭터">
+        </div>
+
+        <div id="trans10">
+            <img src="./images/cast02.jpg" alt="캐릭터">
+            <img src="./images/cast03.jpg" alt="캐릭터">
+        </div>
+    </div>
+</body>
+</html>
