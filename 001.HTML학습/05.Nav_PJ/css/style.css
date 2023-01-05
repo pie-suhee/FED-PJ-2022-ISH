@@ -1,0 +1,97 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+body {
+    color: #ffffff;
+    background: url(../images/nav01_bg.png) no-repeat fixed center/cover;
+}
+
+ul,ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 네비게이션 전체박스 */
+.gnb ul {
+    display: flex;
+    justify-content: center;
+}
+
+.gnb ul > li{
+    padding: 0 32px 15px 32px;
+    position: relative;
+}
+
+.gnb a {
+    /* a요소 필수셋팅: 글자색+밑줄없앰 */
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 서브메뉴 박스 */
+.smenu {
+    width: 200px;
+    height: 0;
+    margin-top: 15px;
+    background-color: #000000;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow:hidden;
+    transition: all .4s ease-out;
+    opacity:0;
+    z-index: 100;
+}
+
+.smenu a {
+    display: block;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* 컨텐츠박스 */
+.cont {
+    max-width: 1000px;
+    height: 40%;
+    margin: 200px auto;
+    border-radius: 15px;
+    border: 10px dashed yellow;
+    position: relative;
+    text-align: center;
+    font-size: 34px;
+    line-height: 400px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.gnb ul > li:nth-child(1):hover .smenu {
+    height: 200px;
+}
+
+.gnb ul > li:nth-child(2):hover .smenu {
+    height: 120px;
+}
+
+.gnb ul > li:nth-child(2)~li:hover .smenu {
+    height: 40px;
+}
+
+.gnb ul > li:hover .smenu {
+    opacity:1;
+}
