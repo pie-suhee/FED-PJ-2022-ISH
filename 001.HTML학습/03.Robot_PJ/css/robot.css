@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/* Robot PJ 메인 CSS - robot.css */
+
+html,body,h1,h2,p,ol,ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/bg.jpg) no-repeat fixed top/cover;
+}
+
+/* 공사중 표시 */
+body * {
+    outline: 2px dashed yellow;
+}
+
+/****** 공통 클래스 ******/
+
+/* 메탈소재1 배경 */
+.mt1 {
+    background: url(../images/metal01.jpg) no-repeat center/cover;
+}
+
+/* 메탈소재2 배경 */
+.mt2 {
+    background: url(../images/metal02.jpg) no-repeat center/cover;
+}
+
+/************************** 1. 상단영역 **************************/
+/************************** 2. 메인영역 **************************/
+
+/* 2-1.로봇박스 */
+.robx{
+    /* 패딩 위,아래 */
+    padding: 200px 0 400px;
+}
+
+/* 로봇머리 */
+.head {
+    width: 250px;
+    height: 235px;
+    /* 마.영.오! */
+    margin: 0 auto;
+    border-radius: 45% 45% 35% 35%;
+    position: relative;
+}
+
+.head > div {
+    position: absolute;
+}
+
+.head::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url(../images/ribon.png) no-repeat center/cover;
+    position: absolute;
+    z-index: 100;
+    top: -20px;
+    right: -15px;
+    transform: rotate(37deg);
+}
+
+.head:hover::before {
+    background: url(../images/ribon01.png) no-repeat center/cover;
+    top: -6px;
+    right: 0px;
+}
+
+/* 눈공통 */
+.eye {
+    width: 50px;
+    height: 50px;
+    background: url(../images/e1.png) no-repeat center/cover;
+    border-radius: 50%;
+}
+
+/* 왼눈 */
+.el {
+    top: 80px;
+    left: 50px;
+}
+
+/* 오눈 */
+.er {
+    top: 80px;
+    right: 50px;
+}
+
+/* 오른쪽 눈 옆에 별모양 가상요소 만들기 */
+.er::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #19305f;
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+    clip-path: polygon(50% 0, 33% 30%, 0 36%, 23% 61%, 18% 95%, 50% 80%, 81% 95%, 76% 61%, 100% 36%, 66% 30%, 50% 0);
+}
+/*
+    [ CSS 클리핑 속성 ]
+    -> clip-path: polygon(x1 y1,x2 y2,...)
+    -> 각 좌표쌍은 띄어쓰기로 각 점은 콤마로 구분
+    -> 각 점을 연결하여 도형모양만 출력한다!
+    -> px은 각 도형 크기 내부의 수치로 쓰고
+       %는 도형을 기준한 위치를 %로 나타낸다!
+ */
+
+/* 코 */
+.nose {
+    width: 10px;
+    height: 20px;
+    background-color: #23a8e3;
+    border-radius: 50% 50% 20% 20%;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 입 */
+.mouth {
+    width: 60px;
+    height: 33px;
+    background: url(../images/mouth01.png) no-repeat center/cover;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 귀 공통 */
+.ear {
+    width: 80px;
+    height: 60px;
+    border-radius: 50% 50% 0 0;
+    background-color: #30a5e8;
+    top: -18px;
+}
+
+/* 왼귀 */
+.erl {
+    transform: rotate(-37deg);
+    left: -14px;
+}
+/* 오른귀 */
+.err {
+    transform: rotate(37deg);
+    right: -14px;
+}
+
+/********* 로봇몸통 *********/
+.body {
+    width: 200px;
+    height: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* 가상요소로 몸통 상단 만들기 */
+.body::before {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 180px;
+    background-image: linear-gradient(15deg, #aaaaaa, #eeeeee, #ffffff, #cccccc);
+    border-radius: 5%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 가상요소로 몸통 하단 만들기 */
+.body::after {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 150px;
+    background-image: linear-gradient(15deg,#eeeeee, #ffffff, #cccccc, #aaaaaa);
+    border-radius: 5%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.body > div {
+    position: absolute;
+}
+/********* 목 *********/
+/********* 왼팔 *********/
+/********* 오른팔 *********/
+/********* 왼다리 *********/
+/********* 오른다리 *********/
+/********* 왼어깨 *********/
+/********* 오른어깨 *********/
+/********* TV **********/
+
+
+/* 2-2.로봇설명박스 */
+
+
+
+/************************** 3. 하단영역 **************************/
