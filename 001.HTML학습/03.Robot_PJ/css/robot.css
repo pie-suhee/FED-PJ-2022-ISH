@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url(./robot_ani.css);
 
 /* Robot PJ 메인 CSS - robot.css */
 
@@ -154,8 +155,8 @@ body * {
 
 /********* 로봇몸통 *********/
 .body {
-    width: 200px;
-    height: 350px;
+    width: 150px;
+    height: 300px;
     margin: 0 auto;
     margin-top: 20px;
     position: relative;
@@ -167,11 +168,12 @@ body * {
     display: block;
     width: 280px;
     height: 180px;
-    background-image: linear-gradient(15deg, #aaaaaa, #eeeeee, #ffffff, #cccccc);
-    border-radius: 5%;
+    background-image: linear-gradient(15deg, #999999, #cccccc, #ffffff, #aaaaaa, #999999);
+    border-radius: 30%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    clip-path: polygon(0 0, 15% 100%, 85% 100%, 100% 0);
 }
 
 /* 가상요소로 몸통 하단 만들기 */
@@ -179,19 +181,29 @@ body * {
     content: "";
     display: block;
     width: 280px;
-    height: 150px;
+    height: 100px;
     background-image: linear-gradient(15deg,#eeeeee, #ffffff, #cccccc, #aaaaaa);
-    border-radius: 5%;
+    border-radius: 30%;
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
+    clip-path: polygon(15% 0, 10% 40%, 20% 100%, 80% 100%, 90% 40%, 85% 0);
 }
 
 .body > div {
     position: absolute;
 }
+
 /********* 목 *********/
+.neck {
+    width: 70px;
+    height: 40px;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 20px 20px;
+}
 /********* 왼팔 *********/
 /********* 오른팔 *********/
 /********* 왼다리 *********/
