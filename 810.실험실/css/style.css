@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    height: 100%;
+}
+
+section>div {
+    flex: 1;
+}
+
+section>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.tpg {
+    height: auto;
+}
+
+.tpg img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 50px;
+}
+
+.mm {
+    text-align: center;
+}
+
+.mm img {
+    width: 50%;
+}
+
+#stk {
+    position: sticky;
+    top:0;
+}
