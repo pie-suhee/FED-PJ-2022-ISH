@@ -85,7 +85,7 @@ animation: 이시이지반방마
     scale(0)
     rotate(0);
     /* 트랜스폼 기준값 변경 */
-    transform-origin: top;
+    /* transform-origin: top; */
 
     /* 애니메이션: 이시이지반방마 */
     animation: 
@@ -156,6 +156,7 @@ animation: 이시이지반방마
         rotateY(180deg);        
         right: -22px;
     }
+
 }
 
 /* 3-2.오른손 애니 호출 */
