@@ -22,6 +22,22 @@ ul,ol {
     list-style: none;
 }
 
+.top {
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tmenu ul {
+    display: flex;
+}
+
+.tmenu a {
+    color:#ffffff;
+    text-decoration: none;
+}
+
 /* 네비게이션 전체박스 */
 .gnb ul {
     display: flex;
