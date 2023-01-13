@@ -36,6 +36,21 @@ Latest commit aec1e8b 52 minutes ago
     <link rel="shortcut icon" type="image/x-icon" href="./images/logo_cgv.png" />
     <!-- 메인페이지 외부CSS -->
     <link rel="stylesheet" href="./css/main.css">
+
+    <script>
+        //alert("나야나");
+        function 멍멍(먹이) {//전달변수 - 값이 내부로 전달
+            //변수는 메모리 공간의 이름
+
+            /* alert(먹이); */
+
+            // 전체문서객체 : document
+            // 가져와요소 아이디이름으로() : 
+            // -> getElementById(아이디명)
+            // -> src 선택된 요소의 src속성
+            document.getElementById('ifr').src="https://www.youtube.com/embed/"+먹이+"?autoplay=1";
+        }//멍멍함수
+    </script>
 </head>
 <body>
     <!-- 1.상단영역 -->
@@ -93,7 +108,15 @@ Latest commit aec1e8b 52 minutes ago
             <nav class="mlist">
                 <ul>
                     <li>
-                        <a href="#" onclick="document.getElementById('ifr').src='https://www.youtube.com/embed/mI9oyFMUlfg?autoplay=1'">
+                        <!-- 
+                            [ 이벤트 속성 ]
+                            -> 모든 요소에 이미 이벤트 속성이 있다!
+                            on+이벤트명
+                            ex) click이벤트 -> onclick
+                         -->
+
+                        <!--  <a href="#" onclick="document.getElementById('ifr').src='https://www.youtube.com/embed/mI9oyFMUlfg?autoplay=1'"> -->
+                        <a href="#" onclick="멍멍('mI9oyFMUlfg')">
                             <img src="./images/m1.jpg" alt="닥터스트레인져1">
                             <!-- 영화정보 -->
                             <ol class="movtxt">
@@ -104,7 +127,7 @@ Latest commit aec1e8b 52 minutes ago
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" onclick="멍멍('DSEfRVqjbFA')">
                             <img src="./images/m2.jpg" alt="쥬라기월드:도미니언">
                             <!-- 영화정보 -->
                             <ol class="movtxt">
@@ -115,7 +138,7 @@ Latest commit aec1e8b 52 minutes ago
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" onclick="멍멍('DpVAb7Bi5UQ')">
                             <img src="./images/m3.jpg" alt="브로커">
                             <!-- 영화정보 -->
                             <ol class="movtxt">
@@ -126,7 +149,7 @@ Latest commit aec1e8b 52 minutes ago
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" onclick="멍멍('aw9j_23nORs')">
                             <img src="./images/m4.jpg" alt="범죄도시2">
                             <!-- 영화정보 -->
                             <ol class="movtxt">
@@ -137,7 +160,7 @@ Latest commit aec1e8b 52 minutes ago
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" onclick="멍멍('QeST_cWv_6I')">
                             <img src="./images/m5.jpg" alt="몬스터싱어">
                             <!-- 영화정보 -->
                             <ol class="movtxt">
@@ -148,7 +171,7 @@ Latest commit aec1e8b 52 minutes ago
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" onclick="멍멍('W7edvITC9g4')">
                             <img src="./images/m6.jpg" alt="스파이더맨:노웨이홈">
                             <!-- 영화정보 -->
                             <ol class="movtxt">
