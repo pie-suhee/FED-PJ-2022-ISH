@@ -1,3 +1,32 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@pie-suhee 
+tombap8
+/
+FED-PJ-2022-tom
+Public
+Fork your own copy of tombap8/FED-PJ-2022-tom
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+FED-PJ-2022-tom/001.HTML학습/06.CGV_PJ/003.구현소스/index.html
+@tombap8
+tombap8 Update index.html
+Latest commit aec1e8b 52 minutes ago
+ History
+ 1 contributor
+149 lines (139 sloc)  6.07 KB
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -24,14 +53,12 @@
             <!-- 2-1. 스크린 -->
             <div class="screen">
                 <!-- 유튜브 아이프레임 -->
-                <iframe src="https://www.youtube.com/embed/i1sqO5r3i3w?autoplay=1&mute=1&loop=1&playlist=i1sqO5r3i3w" allow="autoplay"></iframe>
-                <!-- 
-                    allow="autoplay"는 유튜브
+                <iframe id="ifr" src="https://www.youtube.com/embed/i1sqO5r3i3w?autoplay=1&mute=1&loop=1&playlist=i1sqO5r3i3w" allow="autoplay"></iframe>
+                <!-- allow="autoplay"는 유튜브
                     동영상 요청시 자동재생의 필수다! 
                     
-                    [유튜브 동영상 고유 아이디는?]
+                    [ 유튜브 동영상 고유 아이디는? ]
                     URL주소의 embed/ 뒤의 코드값
-
                     -> 일반 웹 주소일때
                     https://www.youtube.com/watch?v=유튜브고유ID
                 -->
@@ -43,15 +70,11 @@
                     - 프레임보더가 있음
                     (border:none으로 없앰)
                     - 디자인은 css에서 컨트롤 권고
-
                     [ 유튜브 동영상 호출시 파라미터사용 ]
-
                     동영상옵션을 GET방식으로 키=값 넘기기
                     -> 유튜브 본사에서 지정함!
-
                     형식: 유튜브url?키=값&키=값&...
                     -> GET방식 데이터 전송폼
-
                     중요옵션
                     1. 자동재생 : autoplay=1
                     2. 소리없음 : mute=1
@@ -65,6 +88,78 @@
                     -> 반복설정시 반복재생리스트도 같이씀!
                  -->
             </div>
+
+            <!-- 2-2.예고편 선택메뉴 -->
+            <nav class="mlist">
+                <ul>
+                    <li>
+                        <a href="#" onclick="document.getElementById('ifr').src='https://www.youtube.com/embed/mI9oyFMUlfg?autoplay=1'">
+                            <img src="./images/m1.jpg" alt="닥터스트레인져1">
+                            <!-- 영화정보 -->
+                            <ol class="movtxt">
+                                <li>닥터스트레인지2</li>
+                                <li>베네딕트 컴버배치</li>
+                                <li>액션, 판타지, 모험</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/m2.jpg" alt="쥬라기월드:도미니언">
+                            <!-- 영화정보 -->
+                            <ol class="movtxt">
+                                <li>쥬라기월드:도미니언</li>
+                                <li>크리스 프랫</li>
+                                <li>액션, 모험</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/m3.jpg" alt="브로커">
+                            <!-- 영화정보 -->
+                            <ol class="movtxt">
+                                <li>브로커</li>
+                                <li>송강호, 강동원</li>
+                                <li>드라마</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/m4.jpg" alt="범죄도시2">
+                            <!-- 영화정보 -->
+                            <ol class="movtxt">
+                                <li>범죄도시2</li>
+                                <li>마동석, 손석구</li>
+                                <li>범죄, 액션</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/m5.jpg" alt="몬스터싱어">
+                            <!-- 영화정보 -->
+                            <ol class="movtxt">
+                                <li>몬스터싱어</li>
+                                <li>바네사 파라디</li>
+                                <li>애니메이션</li>
+                            </ol>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/m6.jpg" alt="스파이더맨:노웨이홈">
+                            <!-- 영화정보 -->
+                            <ol class="movtxt">
+                                <li>스파이더맨:노웨이홈</li>
+                                <li>톰 홀랜드</li>
+                                <li>액션,모험</li>
+                            </ol>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </main>
     </div>
     <!-- 3.하단영역 -->
