@@ -43,9 +43,11 @@ nav.gnb ul {
     나가서 위의 박스를 밀고 있다! */
     margin-top: 27px;
 }
+
 .gnb > ul > li {    
     margin: 0 10px;
 }
+
 /* GNB a요소 */
 .gnb > ul > li > a {
     position: relative;
