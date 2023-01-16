@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+ /* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+/* font-family: 'Comfortaa', cursive; */
+
+html,body,h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #99cc00;
+    animation: bgAni 10s linear infinite alternate;
+}
+
+/* 전체 타이틀 */
+.tit {
+    height: 50px;
+    margin: 5vh 0;
+    font-size: min(4vw,42px);
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 2px #222222;
+    font-family: 'Comfortaa', cursive;
+    overflow: hidden;
+}
+
+.tit span {
+    display: block;
+    transform: translateY(100%);
+    animation: upAni .3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 1.5s forwards;
+}
+
+.wrap {
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.cont {
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #990000;
+    transform: translateY(120%);
+    animation: upAni .6s cubic-bezier(0.18, 0.89, 0.32, 1.28) 1s forwards;
+}
+
+.frame {
+    width: 150px;
+    height: 280px;
+    margin: 0 auto;
+    background: url(../images/seashore.jpg) no-repeat center/auto 100%;
+    position: relative;
+    top: 20px;
+    perspective: 480px;
+    /*********************************************** 
+        [ 뷰포인트(관찰자위치) 변경옵션 ]
+        perpective-origin : 가로 세로;
+        - 가로축: left, center, right, px, % 등 단위
+        - 세로축: top, center, bottom, px, % 등 단위
+        -> 두 값 중에 하나만 쓸 수 있고 복합일 경우
+        2가지를 같이 셋팅함!
+    ***********************************************/
+    /* perspective-origin: top; */
+    animation: waveAni 3s ease-in-out infinite alternate;
+}
+
+.door {
+    width: 150px;
+    height: 280px;
+    background-color: #cc9900;
+    transform: rotateY(0deg);
+    transform-origin: left;
+    position: relative;
+    animation: 
+    openFirst 1s ease-in-out forwards,
+    openDoor 2s ease-in-out 1s infinite alternate;
+    animation-play-state: paused;
+}
+
+.handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    top: 140px;
+    right: 20px;
+}
+
+#elsa{
+    width: 150px;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+#elsa img{
+    margin-left: 133px;    
+    transform-origin: bottom;
+    animation: elsaAni 1s ease-in-out infinite alternate;
+    animation-play-state: paused;
+}
+
+.cont:hover #elsa img{
+    animation-play-state: running;
+}
+
+.cont:hover .door {
+    animation-play-state: running;
+}
+
+@keyframes bgAni {
+    0% {
+        background-color: #99cc00;
+    }
+
+    20% {
+        background-color: #33cc00;
+    }
+
+    40% {
+        background-color: #00cc8b;
+    }
+
+    60% {
+        background-color: #0066cc;
+    }
+
+    80% {
+        background-color: #6600cc;
+    }
+
+    100% {
+        background-color: #cc00b1;
+    }
+}
+
+@keyframes upAni {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* 문짝 처음열기 프레임 */
+@keyframes waveAni {
+    to {
+        background-size: auto 120%;
+    }
+}
+
+@keyframes elsaAni {
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes openFirst {
+    to {
+        transform: rotateY(60deg);
+    }
+}
+
+@keyframes openDoor {
+    0% {
+        trnasform: rotateY(60deg);
+    }
+    100% {
+        transform: rotateY(-60deg);
+    }
+    
+}
