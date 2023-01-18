@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+}
+.gnb{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.gnb ul{
+    /* 플렉스박스 */
+    display: flex;
+    /* 진행방향정렬 : 중앙 */
+    justify-content: center;
+
+    /* 3無 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gnb ul>li{
+    /* 투명하단보더 */
+    border-bottom: 3px solid transparent;
+}
+/* li오버시 */
+.gnb ul>li:hover{
+    /* 하단보더색넣기 */
+    border-bottom-color: darkblue;
+}
+/* li오버시 a */
+.gnb ul>li:hover>a{
+    color: darkblue;
+}
+.gnb ul>li>a{
+    /* a확장! */
+    display: block;
+    /* a요소에서 글자색,밑줄없앰 */
+    color: #444;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 56px;
+    padding: 0 15px;
+}
