@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
         }
+
         h1,h2 {
             margin: 0;
             padding: 20px;
@@ -30,13 +31,80 @@
 
         /* 2. 화면에 대한 비율박스 */
         .bx2 {
-            height: 40%;
+            height: 40vh;
         }
 
         /* 3. 비율유지박스 */
         .bx3 {
-
+            /* height값 없이 높이값 만들기 */
+            /* padding-top: 50%; */
+            margin-bottom: 200px;
         }
+
+        /* 
+            하위 직계 블록박스에 패딩탑을 %로 주면?
+            100%일 경우 가로,세로 비가 1:1인 박스를 만들 수 있다!
+        */
+        .bx3 .test {
+            padding-top: 100%;
+        }
+
+        /* 직접 블록 자식요소를 넣는 대신 가상요소를 넣고 블록화하여 패딩탑을 %로 셋팅한다! */
+
+        .bx3::before {
+            content:"";
+            display: block;
+            padding-top: 100%;
+            /* 
+                비율을 만들어 보자!
+                예) 16 : 9 = 100 : x
+                x = 9 * 100 / 16
+                  = 56.25
+            */
+        }
+
+        /* 4. 비율유지박스 시스템화 */
+        .rbx {
+            position: relative;
+        }
+
+        .rbx::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%;
+        }
+
+        /* 비율유지 속박스 */
+        .rbxIn {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        /* 내용셋팅 */
+        .cat {
+            position: absolute;
+            bottom: 2%;
+            left: 5%;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            font-size: min(1.5vw,20px);
+            font-weight: bold;
+            line-height: 2;
+            text-shadow: 2px 2px 2px #000;
+        }
+
+        /************************************************
+            [ 비율유지 박스를 만드는 원리 ]
+            1. 가로크기는 %에 준하는 유동적인 셋팅
+            2. 높이값은 셋팅하지 않는다! (auto)
+            3. 가상요소를 블록화하여 패딩탑을 %로 셋팅
+            4. 앱솔루트 속박스를 만들어 컨텐츠 공간 확보
+            (단, 비율유지박스에 부모자격필수!)
+        ************************************************/
     </style>
 </head>
 <body>
@@ -49,7 +117,23 @@
     <div class="bx bx2"></div>
 
     <h2>3. 비율유지박스</h2>
-    <div class="bx bx3"></div>
+    <div class="bx bx3">
+        <!-- <div class="test"></div> -->
+    </div>
+
+    <h2>4. 비율유지박스 시스템화</h2>
+    <div class="bx rbx">
+        <!-- 비율유지속박스 -->
+        <div class="rbxIn">
+            <!-- 컨텐츠 넣기 -->
+            <dl class="cat">
+                <dt>출연진</dt>
+                <dd>이제훈(김도기역)</dd>
+                <dd>이솜(강하나역)</dd>
+                <dd>김의성(장성철역)</dd>
+            </dl>
+        </div>
+    </div>
 </body>
 
 </html>
