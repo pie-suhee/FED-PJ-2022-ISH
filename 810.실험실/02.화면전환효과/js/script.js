@@ -7,6 +7,9 @@ setTimeout(() => {
 
     // 2단계 .go 넣기
     setTimeout(() => {
+        // 자체글자변경
+        document.querySelector(".pg h1").innerText = "짜잔잔잔짠~!!!"
+        // body에 .go 넣기
         tg.classList.add("go");
     }, 1000);
 }, 2000); // setTimeout 함수
