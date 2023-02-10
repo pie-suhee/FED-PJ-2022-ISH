@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>유형4. 세로네비 서브별 드롭다운 세로형</title>
+  <title>유형5. 세로네비 서브별 드롭다운 사이드형</title>
   <style>
     /* 초기화 */
     html,
@@ -66,6 +66,8 @@
 
     /* 상위li 리스트요소 */
     .gnb>ul>li {
+      position: relative;
+      /* 부모자격 - .smenu */
       width: 200px;
       /* height: 40px; */
       text-align: center;
@@ -147,10 +149,10 @@
 
     /* 서브메뉴 */
     .smenu{
-      /* 앱솔루트 포지션
-      -> 자리를 차지하고 아래 메뉴를 밀어내려면
-      static 포지션이어야함! (기본값 static) */
-      /* position: absolute; */
+      position: absolute;
+      top: 0;
+      left: 100%;
+      /* 부모는? 싸고있는 li */
       width: 200px;
 
       /* 메뉴 숨기기 
@@ -239,7 +241,7 @@
 </head>
 
 <body>
-  <h1>유형4. 세로네비 서브별 드롭다운 세로형</h1>
+  <h1>유형5. 세로네비 서브별 드롭다운 사이드형</h1>
   <div class="wrap">
       <!-- GNB 네비게이션 -->
       <nav class="gnb">
