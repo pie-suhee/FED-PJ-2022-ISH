@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS실험실 02 - 글자등장액션 1편</title>
+    <script>
+        window.addEventListener("DOMContentLoaded",()=>{
+            const qs = x=>document.querySelector(x);
+            const stage = qs(".stage");
+            //console.log(stage);
+
+            const mytxt = "무궁화 꽃이 피었습니다";
+
+            let hcode = "";
+            for(let x of mytxt){
+                if(x=="") x ="$nbsp;$nbsp;$nbsp;";
+                hcode += `<span>${x}</span>`;
+            } // for of문
+
+            console.log(hcode);
+            stage.innerHTML = hcode;
+        });
+    </script>
+    <style>
+        body {
+            background-color: darkslategray;
+        }
+
+        .stage {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            outline: 2px dashed yellow;
+            font-size: 3vw;
+            color: #ffffff;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        2004년 <br>
+        사람 냄새가 나는 연기자들이 모여 <br>
+        '나무엑터스'가 되었습니다. <br><br>
+ 
+        깊이 뿌리를 내리고 무성한 잎을 키워가 연기자들이 쉬어갈 수 있는 <br>
+        시원한 그늘이 되자고 항상 다짐했습니다. <br>
+        처음 그 약속처럼, 소속 연기자들의 좋은 친구, 든든한 버팀목이자 <br>
+        엔터네인먼트 업계의 믿음직한 파트너로서 <br>
+        의미있는 문화 콘텐츠의 부흥을 위해 노력하겠습니다.
+    </div>
+    
+</body>
+</html>
