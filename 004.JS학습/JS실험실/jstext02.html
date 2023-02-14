@@ -10,16 +10,30 @@
             const stage = qs(".stage");
             //console.log(stage);
 
-            const mytxt = "무궁화 꽃이 피었습니다";
+            const mytxt = stage.innerText;
+
+            //console.log(mytxt);
 
             let hcode = "";
+            let idx = 0;
             for(let x of mytxt){
-                if(x=="") x ="$nbsp;$nbsp;$nbsp;";
-                hcode += `<span>${x}</span>`;
+                if (x===" ") {
+                    x = "&nbsp;";
+                    hcode += `<span style="transition-delay:${idx*.2}s">${x}</span>`;
+                } else if (x==="^") {
+                    hcode += `<br>`;
+                } else {
+                    hcode += `<span style="transition-delay:${idx*.2}s">${x}</span>`;
+                }
+                idx++;
             } // for of문
 
-            console.log(hcode);
+            //console.log(hcode);
             stage.innerHTML = hcode;
+
+            setTimeout(()=>{
+                stage.classList.add("on");
+            },2000);
         });
     </script>
     <style>
@@ -28,6 +42,8 @@
         }
 
         .stage {
+            width: 80%;
+            margin-left: -3vw;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -35,20 +51,38 @@
             outline: 2px dashed yellow;
             font-size: 3vw;
             color: #ffffff;
-            white-space: nowrap;
+        }
+
+        .stage br:nth-child(1){
+            display: none;
+        }
+
+        .stage span {
+            display: inline-block;
+            transform: translate(500%, -300%);
+            opacity: 0;
+            transition: .3s ease-in;
+        }
+
+        .stage.on span {
+            transform: translate(0, 0);
+            opacity: 1;
         }
     </style>
 </head>
 <body>
+    <!-- ^ = <br>, 맨 위 ^ 줄맞춤을 위해 설정 -->
     <div class="stage">
-        2004년 <br>
-        사람 냄새가 나는 연기자들이 모여 <br>
-        '나무엑터스'가 되었습니다. <br><br>
- 
-        깊이 뿌리를 내리고 무성한 잎을 키워가 연기자들이 쉬어갈 수 있는 <br>
-        시원한 그늘이 되자고 항상 다짐했습니다. <br>
-        처음 그 약속처럼, 소속 연기자들의 좋은 친구, 든든한 버팀목이자 <br>
-        엔터네인먼트 업계의 믿음직한 파트너로서 <br>
+        ^
+        2004년^
+        사람 냄새가 나는 연기자들이 모여^
+        '나무엑터스'가 되었습니다.^^
+        깊이 뿌리를 내리고 무성한 잎을 키워가^
+        연기자들이 쉬어갈 수 있는^
+        시원한 그늘이 되자고 항상 다짐했습니다.^
+        처음 그 약속처럼,^
+        소속 연기자들의 좋은 친구, 든든한 버팀목이자^
+        엔터네인먼트 업계의 믿음직한 파트너로서^
         의미있는 문화 콘텐츠의 부흥을 위해 노력하겠습니다.
     </div>
     
