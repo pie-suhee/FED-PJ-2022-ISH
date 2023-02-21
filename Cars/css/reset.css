@@ -25,7 +25,3 @@ ol::after, ul::after {
     display: block;
     clear: both;
 }
-
-li {
-    float: left;
-}
