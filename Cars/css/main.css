@@ -9,20 +9,11 @@
 /* 초기화 CSS 호출 */
 @import url(reset.css);
 
-/* Cars 메인 페이지 CSS - main.css */
-body {
-    background-color: #000;
-}
-
-/* 레이아웃 공통 */
-.part {
-    width: 1200px;
-    margin: 0 auto;
-}
-
 /* A. 상단부분 */
 #top {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left :0;
     width: 900px;
     height: 100px;
     z-index: 999; /* 상단부에 메뉴가 아래로 내려가 안보이기 때문에 우선순위를 높게 줌 */
@@ -55,13 +46,27 @@ body {
 }
 
 /* B. 메인부분 */
+body > .bg_con {
+    width: 100%;
+    height: 100vh;
+    background: url(../image/main.jpg) no-repeat center/cover;
+    filter: brightness(50%);
+}
 
 /* C. 하단부분 */
 #info {
     position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+}
+
+#info > .info {
     width: 900px;
     height: 100px;
+    margin: 0 auto;
 }
+
 /* 5. 제작사 로고 */
 #info address img {
     height: 60px;
