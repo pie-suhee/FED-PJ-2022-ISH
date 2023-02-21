@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+/* 초기화 CSS 호출 */
+@import url(reset.css);
+
+@font-face {
+	font-family: "Flaviotte";
+	src: url("./fonts/Flaviotte.eot"); /* IE9 Compat Modes */
+	src: url("./fonts/Flaviotte.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		 url("./fonts/Flaviotte.otf") format("opentype"), /* Open Type Font */
+		 url("./fonts/Flaviotte.svg") format("svg"), /* Legacy iOS */
+		 url("./fonts/Flaviotte.ttf") format("truetype"), /* Safari, Android, iOS */
+		 url("./fonts/Flaviotte.woff") format("woff"), /* Modern Browsers */
+		 url("./fonts/Flaviotte.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: 100;
+	font-style: normal;
+}
+
+/* Cars 메인 페이지 CSS - main.css */
+body {
+    background-color: #000000;
+    font-family: "Flaviotte";
+}
+
+/* 레이아웃 공통 */
+.part {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* A. 상단부분 */
+#top {
+    position: relative;
+    width: 900px;
+    height: 100px;
+    z-index: 999; /* 상단부에 메뉴가 아래로 내려가 안보이기 때문에 우선순위를 높게 줌 */
+}
+
+/* 1. 페이지타이틀 */
+.tit{
+    position: relative;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 100px;
+}
+
+/* 2.전체메뉴(시리즈 안내) */
+.gnb{
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+}
+
+.gnb li{
+    float: left;
+    position: relative;
+    padding: 0 10px;
+    font-family: 'Itim', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 1px 1px 10px white;
+    cursor: pointer;
+}
+
+/* B. 메인부분 */
+.section {
+    position: relative;
+}
+
+.section > .bg_con {
+    width: 100%;
+    position: relative;
+}
+
+.section01_con > .bg_con {
+    height: calc(100vh - 140px);
+    background: url(../image/Sally7.jpg) no-repeat center/cover;
+    filter: brightness(50%);
+    background-attachment: fixed;
+}
+
+.section01_con > .contents_con {
+    padding: 0 10%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    word-break: keep-all;
+}
+
+.section02_con {
+    padding: 5vh 0;
+    background-color: #ffffff;
+}
+
+.section02_con > .bg_con {
+    height: calc(80vh - 140px);
+    background: #ffffff url(../image/Sally12.jpg) no-repeat right center/contain;
+}
+
+.section02_con > .contents_con {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    word-break: keep-all;
+}
+
+.section02_con > .contents_con li {
+    margin-top: 20px;
+}
+
+.section02_con > .contents_con li span {
+    font-size: min(40px, 4vw);
+    color: #000000;
+}
+
+.section .contents_con span {
+    color: #ffffff;
+}
+
+.section > .contents_con > .title_con > span {
+    font-size: min(300px, 20vw);
+}
+
+.section > .contents_con > .contents_con {
+    margin-top: 5vh;
+}
+
+.section > .contents_con > .contents_con > span {
+    font-size: min(23px, 2vw);
+}
+
+/* C. 하단부분 */
+#info {
+    position: relative;
+    width: 900px;
+    height: 100px;
+}
+
+/* 5. 제작사 로고 */
+#info address img {
+    height: 60px;
+    float: left;
+    margin-top: 20px; 
+    margin-right: 140px;
+}
+
+/* 6. 하단정보 */
+#info address {
+    font-family: 'Itim', cursive;
+    font-style: normal;
+    color: rgb(243, 242, 242);
+    font-size: 20px;
+    line-height: 100px;
+}
+
+/* 7. sns 버튼 */
+.sns {
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+
+/* IR 배경이미지 숨기기 */
+.bld {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* li 박스 */
+.sns li {
+    width: 34px;
+    height: 34px;
+    float: left;
+    margin: 2px;
+    background: url(../image/sprites_logo.png) no-repeat;
+}
+
+/* 스프라이츠 위치 */
+.sns li:nth-child(1){
+    background-position: -464px -429px;
+}
+.sns li:nth-child(2){
+    background-position: -509px -429px;
+}
+.sns li:nth-child(3){
+    background-position: -551px -429px;
+}
+.sns li:nth-child(4){
+    background-position: -593px -429px;
+}
