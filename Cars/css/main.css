@@ -1,119 +1,77 @@
 @charset "utf-8";
-/* 외부 CSS 파일 상단에는 반드시 인코딩형식을
-지정해야만 문자가 깨짐없이 잘 실행된다 */
-
-/* 웹폰트 CDN - Itim */
-@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap'); 
-    
 
 /* 초기화 CSS 호출 */
 @import url(reset.css);
+@import url(common.css);
+@import url(fonts.css);
 
-/* A. 상단부분 */
-#top {
-    position: absolute;
-    top: 0;
-    left :0;
-    width: 900px;
-    height: 100px;
-    z-index: 999; /* 상단부에 메뉴가 아래로 내려가 안보이기 때문에 우선순위를 높게 줌 */
-}
-
-/* 1. 페이지타이틀 */
-.tit{
-    position: relative;
-    left: calc(50% - 100px);
-    width: 200px;
-    height: 100px;
-}
-
-/* 2.전체메뉴(시리즈 안내) */
-.gnb{
-    position: absolute;
-    bottom: 15px;
-    right: 0;
-}
-
-.gnb li{
-    float: left;
-    position: relative;
-    padding: 0 10px;
-    font-family: 'Itim', sans-serif;
-    color: #fff;
-    font-size: 24px;
-    text-shadow: 1px 1px 10px white;
-    cursor: pointer;
-}
 
 /* B. 메인부분 */
-body > .bg_con {
+.bg_con {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 100px);
     background: url(../image/main.jpg) no-repeat center/cover;
-    filter: brightness(50%);
+    filter: brightness(30%);
 }
 
-/* C. 하단부분 */
-#info {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background-color: #000000;
-}
-
-#info > .info {
-    width: 900px;
-    height: 100px;
+.cont {
+    display: grid;
+    width: 50vw;
+    height: 70vh;
     margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.3fr 0.7fr;
+    grid-template-areas:
+    'season1 season2 season3'
+    'characters characters characters';
+    grid-gap: 1vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* 5. 제작사 로고 */
-#info address img {
-    height: 60px;
-    float: left;
-    margin-top: 20px; 
-    margin-right: 140px;
+.cont > div {
+    position: relative;
 }
-/* 6. 하단정보 */
-#info address {
-    font-family: 'Itim', cursive;
-    font-style: normal;
-    color: rgb(243, 242, 242);
-    font-size: 20px;
-    line-height: 100px;
+
+.cont > div:hover {
+    background-size: 120% auto;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-/* 7. sns 버튼 */
-.sns {
+
+.cont > div::after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 30px;
-    right: 0;
-}
-/* IR 배경이미지 숨기기 */
-.bld {
-    display: block;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-}
-/* li 박스 */
-.sns li {
-    width: 34px;
-    height: 34px;
-    float: left;
-    margin: 2px;
-    background: url(../image/sprites_logo.png) no-repeat;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 999;
 }
 
-/* 스프라이츠 위치 */
-.sns li:nth-child(1){
-    background-position: -464px -429px;
+.cont > div:hover::after {
+    display: block;
 }
-.sns li:nth-child(2){
-    background-position: -509px -429px;
+
+.season1 {
+    grid-area: season1;
+    background: url(../image/car1_poster.jpg) no-repeat center/cover;
 }
-.sns li:nth-child(3){
-    background-position: -551px -429px;
+
+.season2 {
+    grid-area: season2;
+    background: url(../image/car2_poster.jpg) no-repeat center/cover;
 }
-.sns li:nth-child(4){
-    background-position: -593px -429px;
+
+.season3 {
+    grid-area: season3;
+    background: url(../image/car3_poster.jpg) no-repeat center/cover;
+}
+
+.characters {
+    grid-area: characters;
+    background: url(../image/main.jpg) no-repeat  center 80%/cover;
 }
