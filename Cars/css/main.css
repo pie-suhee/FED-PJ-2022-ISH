@@ -5,6 +5,9 @@
 @import url(common.css);
 @import url(fonts.css);
 
+body {
+    font-family: "Flaviotte";
+}
 
 /* B. 메인부분 */
 .bg_con {
@@ -16,7 +19,7 @@
 
 .cont {
     display: grid;
-    width: 50vw;
+    width: min(900px, 90vw);
     height: 70vh;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr;
@@ -35,25 +38,26 @@
     position: relative;
 }
 
+.cont > div > a {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 2vw;
+    color: #000000;
+    
+}
+
 .cont > div:hover {
     background-size: 120% auto;
     transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.cont > div::after {
-    content: "";
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    z-index: 999;
-}
-
-.cont > div:hover::after {
-    display: block;
+.cont > div:hover > a {
+    display: flex;
 }
 
 .season1 {

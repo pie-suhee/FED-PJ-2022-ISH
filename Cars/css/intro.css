@@ -3,27 +3,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 
 html,body {
-    height: 100%;
+    width: 100%;
+    height: 100vh;
 }
 
 /* 오버레이효과 */
 body::after {
     content: '';
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: #000;
+    height: 100vh;
+    background-color: #000000;
     opacity: .4;
 }
 
 /* 인트로 영상 */
 #introVid {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    border: none;
 }
 
 #enter {
