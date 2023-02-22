@@ -1,3 +1,5 @@
-window.addEventListener("DOMContentLoaded", function(){
-    const iframe = document.querySelector("#introVid");
-}); // 로딩
+window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        location.href = "index.html";
+    }, 103000);
+});
