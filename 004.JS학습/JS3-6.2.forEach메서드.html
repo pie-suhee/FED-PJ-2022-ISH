@@ -76,8 +76,8 @@
                 });
             */
 
-            btngo.forEach(ele=>{
-                //console.log("버튼셋팅!",ele);
+            btngo.forEach((ele,idx,obj)=>{
+                console.log("버튼셋팅!",ele,idx,obj);
 
                 // 1. 클릭이벤트 설정
                 ele.onclick = () => {
