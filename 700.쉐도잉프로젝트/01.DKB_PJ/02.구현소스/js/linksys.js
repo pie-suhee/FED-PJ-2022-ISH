@@ -79,6 +79,13 @@ window.addEventListener("DOMContentLoaded",()=>{
             // 기타 내부시스템 페이지 이동하기
             else {
                 /*
+                    메인페이지 이동일 경우
+                    html?code=m을 보내주자!
+                */
+                
+                location.href=
+                url + ".html" + (atxt==="tvN로고"?"?code=m":"");
+                /*
                     [ 페이지 이동하기 ]
                     ((현재창열기))
                     window.location.href = 이동할주소
@@ -89,7 +96,7 @@ window.addEventListener("DOMContentLoaded",()=>{
                     window.open().location.href = 이동할주소
                     -> window.open()은 원래 팝업창 띄우기임!
                 */
-               location.href = url+".html";
+                // location.href = url+".html";
             } // else
 
             // a요소의 기본이동 기능을 막는다!

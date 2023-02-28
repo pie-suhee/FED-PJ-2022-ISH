@@ -76,8 +76,6 @@
             4. &(엔퍼센드)는 키=값 쌍단위를 구분해주는 구분자
         */
 
-        //////// 로드구역 ////////////////////////
-        // DOMContentLoaded는 html만 모두 그려지면 발생하는 이벤트!
         window.addEventListener("DOMContentLoaded", function () {
 
             // 로딩구역 확인
@@ -91,9 +89,18 @@
                 x.onclick = () =>{
                     let atxt = x.innerText;
 
-                    location.href = "Get02.html?shop="+atxt;
+                    location.href = 
+                    "Get02.html?shop="+encodeURIComponent(atxt);
+                    /*
+                        2byte문자인 한글을 보낼 때 인코딩함수사용!
+                        예) Get02.html?shop=레드샵
+                        -> 인코딩함수를 안써도 최신브라우저는 자동 인코딩을 내부적으로 지원한다!
+                            하지만 지원을 하지 않는 경우도 있으므로
+                            반드시 인코딩함수를 사용하여 보내고 디코딩함수로 풀어주도록 하자!
+                    */
                 }
             } // for of문
+
             /* 
                 [ url로 보낼때 한글깨짐 방지하기! ]
 
@@ -115,13 +122,9 @@
                 (%xx)이나 4 디짓(%uxxxx) 데이터로 전환된다.
                  예를 들어 빈칸(' ')은 %20, 세미콜론(;)은 %3B, 
                 '한글'은 %uD55C%uAE00'이 된다.
-
             */
 
-
-
-        }); /////////// 로드구역 //////////////////////////////////
-        /////////////////////////////////////////////////////////
+        }); // 로드구역
     </script>
 
 </head>
@@ -143,9 +146,6 @@
         <img src="images/shop_green.jpg" alt="그린샵">
         <img src="images/shop_blue.jpg" alt="블루샵">
     </section>
-
-
-
 </body>
 
 </html>
