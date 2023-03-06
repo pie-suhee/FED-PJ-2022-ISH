@@ -73,6 +73,8 @@ body {
 
 .section > .contents_con > .title_con > span {
     font-size: min(300px, 20vw);
+    font-weight: bold;
+    font-family: dominikth;
 }
 
 .section > .contents_con > .contents_con {

@@ -6,7 +6,7 @@
 @import url(fonts.css);
 
 body {
-    font-family: "Flaviotte";
+    font-family: "dominikth";
 }
 
 /* B. 메인부분 */
@@ -48,6 +48,7 @@ body {
     left: 0;
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 2vw;
+    font-weight: bold;
     color: #000000;
 }
 
