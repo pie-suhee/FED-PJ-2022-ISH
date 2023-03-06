@@ -86,6 +86,7 @@ body {
     }
 
     .cont {
+        height: 65vh;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
@@ -93,7 +94,8 @@ body {
         'season2'
         'season3'
         'characters';
-        top: 46%;
+        top: 47%;  
+        transform: translate(-50%, -50%);
     }
 
     .cont > div > a {
