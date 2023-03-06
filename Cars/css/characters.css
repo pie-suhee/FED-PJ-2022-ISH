@@ -83,4 +83,5 @@ body {
 
 .section > .contents_con > .contents_con > span {
     font-size: min(23px, 2vw);
+    font-family: neutraltextbook;
 }
