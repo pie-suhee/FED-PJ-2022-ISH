@@ -70,7 +70,7 @@
 
 /* 스프라이츠 위치 */
 .sns li:nth-child(1){
-    background-position: -464px -429px;
+    background-position: -465px -429px;
 }
 .sns li:nth-child(2){
     background-position: -509px -429px;
@@ -80,4 +80,35 @@
 }
 .sns li:nth-child(4){
     background-position: -593px -429px;
+}
+
+@media(max-width:750px){
+    .tit{
+        left: calc(50% - 75px);
+        width: 150px;
+        height: 75px;
+    }
+
+    #info {
+        margin: 0 auto;
+    }
+
+    #info > .info {
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+
+    #info address {
+        line-height: 40px;
+    }
+
+    .sns {
+        width: 152px;
+        margin: 0 auto;
+    }
+
+    #info {
+        height: 160px;
+    }
 }

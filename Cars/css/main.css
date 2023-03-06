@@ -49,7 +49,6 @@ body {
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 2vw;
     color: #000000;
-    
 }
 
 .cont > div:hover {
@@ -79,4 +78,31 @@ body {
 .characters {
     grid-area: characters;
     background: url(../image/main.jpg) no-repeat  center 80%/cover;
+}
+
+@media(max-width:750px){
+    .bg_con {
+        height: calc(100vh - 160px);
+    }
+
+    .cont {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        'season1'
+        'season2'
+        'season3'
+        'characters';
+        top: 46%;
+    }
+
+    .cont > div > a {
+        display: flex;
+        font-size: 6vw;
+    }
+    
+    .cont > div:hover {
+        background-size: 100% auto;
+        transition: none;
+    }
 }
