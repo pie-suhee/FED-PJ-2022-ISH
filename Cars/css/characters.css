@@ -21,7 +21,7 @@ body {
 
 .section01_con > .bg_con {
     height: 100vh;
-    background: url(../image/Sally7.jpg) no-repeat center/cover;
+    background: url(../image/Sally_main.jpg) no-repeat center/cover;
     filter: brightness(50%);
     background-attachment: fixed;
 }
