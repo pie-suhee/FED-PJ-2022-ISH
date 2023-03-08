@@ -12,7 +12,7 @@
 }
 
 .top > a {
-    width: 150px;
+    width: 200px;
     height: auto;
     margin: 0 auto;
 }
@@ -88,7 +88,7 @@
 
 #nav > .contents_con {
     display: flex;
-    width: 100%;
+    width: 100%; 
 }
 
 #nav > .contents_con > .left_nav {
@@ -100,6 +100,49 @@
     width: 30%;
     height: 100vh;
     background-color: #ffffff;
+    position: relative;
+}
+
+#nav > .contents_con > .right_nav .close_btn {
+    position: absolute;
+    top: calc(2vh + 50px);
+    right: 5vw;
+    transform: translateY(-50%);
+}
+
+#nav > .contents_con > .right_nav .close_btn a {
+    font-size: min(26px, 6vw);
+    color: #000000;
+    font-weight: bold;
+    font-family: dominikth;
+}
+
+#nav > .contents_con > .right_nav .list_con {
+    width: 100%;
+    padding-left: 20%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+#nav > .contents_con > .right_nav .list_con li {
+    margin-top: 50px;
+}
+
+#nav > .contents_con > .right_nav .list_con li a {
+    display: inline;
+    font-size: min(34px, 12vw);
+    color: #000000;
+    font-weight: bold;
+    font-family: dominikth;
+}
+
+#nav > .contents_con > .right_nav .list_con li:first-child{
+    margin-top: 0;
 }
 
 /* C. 하단부분 */
