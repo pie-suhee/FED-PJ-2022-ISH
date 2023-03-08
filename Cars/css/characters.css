@@ -83,3 +83,9 @@ body {
     font-size: min(23px, 2vw);
     font-family: neutraltextbook;
 }
+
+@media(max-width:1024px){
+    .section > .contents_con > .contents_con > span {
+        font-size: min(28px, 4vw);
+    }
+}
