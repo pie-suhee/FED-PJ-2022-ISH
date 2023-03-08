@@ -162,6 +162,16 @@
     background-position: -593px -429px;
 }
 
+@media(max-width:1024px){
+    #nav > .contents_con > .left_nav {
+        width: 50%;
+    }
+    
+    #nav > .contents_con > .right_nav {
+        width: 50%;
+    }
+}
+
 @media(max-width:750px){
     .tit{
         left: calc(50% - 75px);
