@@ -21,8 +21,13 @@ body {
 
 .top .btn_con a {
     font-size: min(26px, 6vw);
+    color:#ffffff;
     font-weight: bold;
     font-family: dominikth;
+}
+
+.top .btn_con a.black {
+    color:#000000;
 }
 
 .top .btn_con img {
