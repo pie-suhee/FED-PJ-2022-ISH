@@ -10,41 +10,14 @@ body {
     background-color: #000000;
 }
 
-.top .btn_con {
-    /* width: 50px;
-    height: auto; */
-    position: absolute;
-    top: 50%;
-    right: 5vw;
-    transform: translateY(-50%);
-}
-
-.top .btn_con a {
-    font-size: min(26px, 6vw);
-    color:#ffffff;
-    font-weight: bold;
-    font-family: dominikth;
-}
-
-.top .btn_con a.black {
-    color:#000000;
-}
-
-.top .btn_con img {
-    width: 100%;
-    height: 100%;
-}
-
-.section {
-    position: relative;
-}
-
+.section,
 .section > .bg_con {
     width: 100%;
     position: relative;
 }
 
 .section01_con > .bg_con {
+    width: 100%;
     height: 100vh;
     background: url(../image/Sally_main.jpg) no-repeat center/cover;
     filter: brightness(50%);
@@ -69,11 +42,11 @@ body {
 
 .section02_con > .bg_con {
     height: calc(80vh - 140px);
-    background: #ffffff url(../image/Sally12.jpg) no-repeat right center/contain;
+    background-color: #ffffff;
 }
 
 .section02_con > .contents_con {
-    width: 1200px;
+    width: 62.5%;
     margin: 0 auto;
     padding: 0 10%;
     position: absolute;

@@ -3,11 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico">
         
         <title>Cars Characters</title>      
         <link rel="stylesheet" href="./css/characters.css">
+
+        <script src="./js/nav.js"></script>
     </head>
     <body>
         <!-- A. 상단 -->
@@ -19,7 +20,7 @@
                 </a>
 
                 <div class="btn_con">
-                    <a href="javascript:nav();">
+                    <a href="#" onclick="nav();">
                         MENU
                         <!-- <img src="image/main_nav_open_btn.png" alt="메뉴 열기 버튼"> -->
                     </a>
@@ -30,40 +31,42 @@
         <div id="nav_bg" onclick="nav();"></div>
         <div id="nav">
             <div class="contents_con">
-                <div class="left_con left_nav"></div>
+                <div class="left_con left_nav" onclick="nav();"></div>
                 <div class="right_con right_nav">
-                    <div class="close_btn">
-                        <a href="javascript:nav();">
-                            CLOSE
-                        </a>
-                    </div>
+                    <div class="contents_con">
+                        <div class="close_btn">
+                            <a href="#" onclick="nav();">
+                                CLOSE
+                            </a>
+                        </div>
 
-                    <div class="list_con">
-                        <ul>
-                            <li>
-                                <a href="season1.html">
-                                    Season 1
-                                </a>
-                            </li>
+                        <div class="list_con">
+                            <ul>
+                                <li>
+                                    <a href="season1.html">
+                                        Season 1
+                                    </a>
+                                </li>
 
-                            <li>
-                                <a href="season2.html">
-                                    Season 2
-                                </a>
-                            </li>
+                                <li>
+                                    <a href="season2.html">
+                                        Season 2
+                                    </a>
+                                </li>
 
-                            <li>
-                                <a href="season3.html">
-                                    Season 3
-                                </a>
-                            </li>
+                                <li>
+                                    <a href="season3.html">
+                                        Season 3
+                                    </a>
+                                </li>
 
-                            <li>
-                                <a href="characters.html">
-                                    Characters
-                                </a>
-                            </li>
-                        </ul>
+                                <li>
+                                    <a href="characters.html">
+                                        Characters
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
