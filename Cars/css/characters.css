@@ -13,12 +13,12 @@ body {
 .section,
 .section > .bg_con {
     width: 100%;
+    height: 100vh;
     position: relative;
 }
 
 .section01_con > .bg_con {
     width: 100%;
-    height: 100vh;
     background: url(../image/Sally_main.jpg) no-repeat center/cover;
     filter: brightness(50%);
     background-attachment: fixed;
@@ -35,25 +35,69 @@ body {
     word-break: keep-all;
 }
 
-.section02_con {
-    padding: 5vh 0;
-    background-color: #ffffff;
+.section01_con .contents_con span {
+    color: #ffffff;
 }
 
-.section02_con > .bg_con {
-    height: calc(80vh - 140px);
-    background-color: #ffffff;
+.section01_con > .contents_con > .title_con > span {
+    font-size: min(300px, 20vw);
+    font-weight: bold;
+    font-family: dominikth;
+}
+
+.section01_con > .contents_con > .contents_con {
+    margin-top: 5vh;
+}
+
+.section01_con > .contents_con > .contents_con > span {
+    font-size: min(23px, 2vw);
+    font-family: neutraltextbook;
+}
+
+.section02_con {
+    display: flex;
+    height: auto;
+}
+
+.section02_con > .img_con {
+    width: 60%;
+}
+
+.section02_con > .img_con > img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: sticky;
+    top: 0;
 }
 
 .section02_con > .contents_con {
-    width: 62.5%;
-    margin: 0 auto;
-    padding: 0 10%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    width: 40%;
+    padding: 5%;
+    box-sizing: border-box;
     word-break: keep-all;
+}
+
+.section02_con > .contents_con span {
+    color: #ffffff;
+}
+
+.section02_con > .contents_con > .title_con {
+    margin-top: 20%;
+}
+
+.section02_con > .contents_con > .title_con > span {
+    font-size: min(60px, 6vw);
+    font-weight: bold;
+    font-family: "dominikth";
+}
+
+.section02_con > .contents_con > .title_con:first-child {
+    margin-top: 0;
+}
+
+.section02_con > .contents_con > .list_con {
+    margin-top: 10%;
 }
 
 .section02_con > .contents_con li {
@@ -61,31 +105,20 @@ body {
 }
 
 .section02_con > .contents_con li span {
-    font-size: min(40px, 4vw);
-    color: #000000;
-}
-
-.section .contents_con span {
+    font-size: min(27px, 6vw);
     color: #ffffff;
+    font-family: "neutraltextbook";
+    word-break: keep-all;
 }
 
-.section > .contents_con > .title_con > span {
-    font-size: min(300px, 20vw);
-    font-weight: bold;
-    font-family: dominikth;
-}
-
-.section > .contents_con > .contents_con {
-    margin-top: 5vh;
-}
-
-.section > .contents_con > .contents_con > span {
-    font-size: min(23px, 2vw);
-    font-family: neutraltextbook;
+.section02_con > .contents_con li span.small {
+    display: inline-block;
+    font-size: min(24px, 5vw);
+    margin-top: 5%;
 }
 
 @media(max-width:1024px){
-    .section > .contents_con > .contents_con > span {
+    .section01_con > .contents_con > .contents_con > span {
         font-size: min(28px, 4vw);
     }
 }
