@@ -218,14 +218,14 @@
 }
 
 @media(max-width:750px){
+    .top > a {
+        width: 150px;
+    }
+
     .tit {
         left: calc(50% - 75px);
         width: 150px;
         height: 75px;
-    }
-
-    .tit a {
-        width: 150px;
     }
 
     #nav > .contents_con > .left_nav {
