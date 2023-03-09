@@ -56,18 +56,30 @@ body {
 }
 
 .section01_con .character_list {
-    width: 100%;
-    /* position: absolute;
-    bottom: 5vh;
-    left: 0; */
+    width: 30%;
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .section01_con .character_list ul {
     display: flex;
+    align-items: flex-end;
 }
 
 .section01_con .character_list ul li {
     flex: 1;
+    filter: grayscale(100%);
+}
+
+.section01_con .character_list ul li.on,
+.section01_con .character_list ul li:hover {
+    filter: grayscale(0);
+}
+
+.section01_con .character_list ul li img {
+    width: 100%;
 }
 
 /* section02 */
