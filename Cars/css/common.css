@@ -212,13 +212,20 @@
 
 @media(max-width:750px){
     .top > a {
-        width: 150px;
+        width: 100px;
+    }
+
+    .top .btn_con a {
+        font-size: min(20px, 6vw);
+        color:#ffffff;
+        font-weight: bold;
+        font-family: dominikth;
     }
 
     .tit {
         left: calc(50% - 75px);
-        width: 150px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
     }
 
     #nav > .contents_con > .left_nav {
@@ -227,6 +234,13 @@
     
     #nav > .contents_con > .right_nav {
         width: 70%;
+    }
+
+    #nav > .contents_con > .right_nav .close_btn a {
+        font-size: min(20px, 6vw);
+        color: #000000;
+        font-weight: bold;
+        font-family: dominikth;
     }
 
     #info {
