@@ -84,7 +84,7 @@ body {
 
 @media(max-width:750px){
     .bg_con {
-        height: calc(100vh - 160px);
+        height: calc(100vh - 140px);
     }
 
     .cont {
