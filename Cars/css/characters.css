@@ -258,10 +258,6 @@ body {
 @media(max-width:768px){
     .section01_con .character_list {
         width: 70%;
-        position: absolute;
-        bottom: 2vh;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .section03_con > .contents_con .swiper-slide {
