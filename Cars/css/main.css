@@ -52,11 +52,6 @@ body {
     color: #000000;
 }
 
-.cont > div:hover {
-    background-size: 120% auto;
-    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
 .cont > div:hover > a {
     display: flex;
 }
@@ -93,7 +88,7 @@ body {
     }
 
     .cont {
-        height: 65vh;
+        height: 60vh;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
@@ -111,7 +106,6 @@ body {
     }
     
     .cont > div:hover {
-        background-size: 100% auto;
         transition: none;
     }
 }
