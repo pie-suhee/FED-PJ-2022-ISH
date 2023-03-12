@@ -19,7 +19,7 @@ body {
 
 .cont {
     display: grid;
-    width: min(900px, 90vw);
+    width: min(1200px, 90vw);
     height: 70vh;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr;
