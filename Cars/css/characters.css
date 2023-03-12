@@ -211,6 +211,10 @@ body {
         font-size: min(28px, 4vw);
     }
 
+    .section01_con .character_list {
+        width: 60%;
+    }
+
     .section02_con {
         display: block;
         height: auto;
