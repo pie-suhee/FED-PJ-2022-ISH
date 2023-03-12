@@ -26,8 +26,6 @@
 
 /* nav */
 #top .btn_con {
-    /* width: 50px;
-    height: auto; */
     position: absolute;
     top: 50%;
     right: 5vw;
@@ -44,11 +42,6 @@
 .top .btn_con a.black {
     color:#000000;
 }
-
-/* .top .btn_con img {
-    width: 100%;
-    height: 100%;
-} */
 
 #nav_bg {
     display: none;
@@ -238,6 +231,7 @@
 
     #info {
         margin: 0 auto;
+        height: 140px;
     }
 
     #info > .info {
@@ -246,17 +240,18 @@
         text-align: center;
     }
 
+    #info .copyLogo img {
+        height: 50px;
+    }
+
     #info address {
-        line-height: 40px;
+        font-size: 12px;
+        line-height: 20px;
     }
 
     .sns {
         width: 152px;
-        margin: 5px auto 0;
-    }
-
-    #info {
-        height: 160px;
+        margin: 10px auto 0;
     }
 }
 
