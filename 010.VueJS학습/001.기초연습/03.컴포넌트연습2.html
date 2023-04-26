@@ -243,7 +243,7 @@
                     //  v-on:click="goPapa" 로 부모이벤트 접근시작!
                     template:`
                     <div>
-                        <img v-bind:src="gsrc" v-on:click="goPapa" alt="dress" />
+                        <img v-bind:src="gsrc" v-on:click="goPapa" v-on:mouseover="ovNow" alt="dress" />
                         <aside>
                             <h2>{{gname}}</h2>
                             <h3>{{gprice}}</h3>
@@ -281,6 +281,10 @@
                         insComma(x) {
                             return x.toString()
                             .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        },
+
+                        ovNow(){
+                            this.$emit("gotkimchi");
                         }
 
                     }
@@ -295,6 +299,9 @@
                         // 자식이벤트 전달후 실행메서드!
                         goMsg(){
                             alert("자식이 부모에게 이벤트전달 성공!");
+                        },
+                        ovMsg(){
+                            console.log("오버");
                         }
                     }
 
@@ -337,7 +344,7 @@
         <!-- 그리드 레이아웃 박스 -->
         <div class="grid">
             <!-- 여기가 부모입니다!!! -->
-            <list-comp v-for="(n,i) in 50" v-bind:key="n" v-bind:haha="n" v-bind:myseq="i" v-bind:endlet="'WD'" v-on:hull="goMsg"></list-comp>
+            <list-comp v-for="(n,i) in 50" v-bind:key="n" v-bind:haha="n" v-bind:myseq="i" v-bind:endlet="'WD'" v-on:hull="goMsg" v-on:gotkimchi="ovMsg"></list-comp>
 
             <!-- 
                 v-on:hull="goMsg"
