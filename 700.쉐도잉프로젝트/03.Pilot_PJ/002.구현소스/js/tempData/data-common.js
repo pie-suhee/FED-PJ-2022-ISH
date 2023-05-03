@@ -1,77 +1,172 @@
-// 카테고리 서브페이지 JS - sub.js
+// 공통 data 객체 셋팅 JS - data-common.js
 
-// 메뉴기능함수 가져오기
-import menuFn from "./mainjs/menu.js";
-// 공통 데이터 가져오기
-import comData from "./tempData/data-common.js";
+const comData = {
+  // 상단영역 html data
+  tarea: `                    
+  <header class="top ibx">
+      <!-- 1-1.로고 -->
+      <h1 id="logo">
+          <a href="#">
+              <img src="images/main_logo.png" alt="파일럿로고" />
+          </a>
+      </h1>
+      <!-- 1-2.GNB메뉴 : 3개(배너,하단제외) -->
+      <nav class="gnb">
+          <ul>
+              <li class="bld">배너순번 li 숨기기</li>
+              <li>
+                  <a href="#men">MEN</a>
+              </li>
+              <li>
+                  <a href="#women">WOMEN</a>
+              </li>
+              <li>
+                  <a href="#style">STYLE</a>
+              </li>
+          </ul>
+      </nav>
+
+      <!-- 햄버거버튼 -->
+      <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      <!-- 전체메뉴박스 -->
+      <!-- 같은 부모박스 아래 있어야 z-index비교로 햄버거버튼
+  이 위에 올 수 있다! -->
+      <div class="mbox">
+          <!-- 
+          배경 동영상 : muted 소리없음, loop 반복재생
+      -->
+          <video src="images/disc2018.mp4" class="bgm" loop muted></video>
+          <!-- 전체메뉴 -->
+          <nav class="mlist">
+              <dl>
+                  <dt><a href="#">MEN</a></dt>
+                  <dd><a href="#">T-SHIRT</a></dd>
+                  <dd><a href="#">JACKET</a></dd>
+                  <dd><a href="#">TRAINING WARE</a></dd>
+                  <dd><a href="#">BEACH WARE</a></dd>
+              </dl>
+              <dl>
+                  <dt><a href="#">WOMEN</a></dt>
+                  <dd><a href="#">T-SHIRT</a></dd>
+                  <dd><a href="#">JACKET</a></dd>
+                  <dd><a href="#">TRAINING WARE</a></dd>
+                  <dd><a href="#">BEACH WARE</a></dd>
+              </dl>
+              <dl>
+                  <dt><a href="#">STYLE</a></dt>
+                  <dd><a href="#">COLLECTION</a></dd>
+                  <dd><a href="#">SEASON AD</a></dd>
+                  <dd><a href="#">STAR &amp; NEWS</a></dd>
+                  <dd><a href="#">MAIN ITEM</a></dd>
+              </dl>
+          </nav>
+      </div>
+  </header>
+
+  `,
+  // 상단영역 html data
+  tareaSub: `                    
+  <header class="top ibx">
+      <!-- 1-1.로고 -->
+      <h1 id="logo">
+          <a href="#">
+              <img src="images/main_logo.png" alt="파일럿로고" />
+          </a>
+      </h1>
+      <!-- 1-2.GNB메뉴 : 3개(배너,하단제외) -->
+      <nav class="gnb">
+          <ul>
+              <li class="bld">배너순번 li 숨기기</li>
+              <li>
+                  <a href="#men">NEW ARRIVAL</a>
+              </li>
+              <li>
+                  <a href="#women">WINDBREAKER</a>
+              </li>
+              <li>
+                  <a href="#style">BEACH STYLE</a>
+              </li>
+              <li>
+                  <a href="#style">SPORT STYLE</a>
+              </li>
+              
 
 
-//###### 상단영역 메뉴 뷰 템플릿 셋팅하기 #######
-// Vue.component(내가지은요소명,{옵션})
-Vue.component("top-comp",{
-    template:comData.tareaSub,
-}); ////////// 상단영역 Vue component //////////
-
-//###### 하단영역 메뉴 뷰 템플릿 셋팅하기 #######
-Vue.component("foot-comp",{
-    template:comData.barea,
-}); ////////// 하단영역 Vue component //////////
-
-//###### 상단영역 뷰 인스턴스 생성하기 ##########
-// new Vue({옵션})
-new Vue({
-    el:"#top",
-    data:{},
-    // mounted 실행구역: DOM연결후
-    mounted:function(){
-        // 제이쿼리코드함수 호출!
-        console.log("mounted구역");
-
-        // 메뉴기능 호출
-        menuFn();
-
-        // 스와이퍼 생성함수 호출
-        makeSwiper();
-
-        // 부드러운 스크롤 실행
-        startSS();
-    },    
-    // created 실행구역 : DOM연결전
-    created:function(){
-        // DOM연결전 데이터 가공작업
-        console.log("created구역");
-    },    
-}); //////// 상단영역 뷰 인스턴스 ////////  
-
-//###### 하단영역 뷰 인스턴스 생성하기 ##########
-new Vue({
-    el:"#info",
-}) //////// 하단영역 뷰 인스턴스 ////////  
 
 
+          </ul>
+      </nav>
+
+      <!-- 햄버거버튼 -->
+      <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      <!-- 전체메뉴박스 -->
+      <!-- 같은 부모박스 아래 있어야 z-index비교로 햄버거버튼
+  이 위에 올 수 있다! -->
+      <div class="mbox">
+          <!-- 
+          배경 동영상 : muted 소리없음, loop 반복재생
+      -->
+          <video src="images/disc2018.mp4" class="bgm" loop muted></video>
+          <!-- 전체메뉴 -->
+          <nav class="mlist">
+              <dl>
+                  <dt><a href="#">MEN</a></dt>
+                  <dd><a href="#">T-SHIRT</a></dd>
+                  <dd><a href="#">JACKET</a></dd>
+                  <dd><a href="#">TRAINING WARE</a></dd>
+                  <dd><a href="#">BEACH WARE</a></dd>
+              </dl>
+              <dl>
+                  <dt><a href="#">WOMEN</a></dt>
+                  <dd><a href="#">T-SHIRT</a></dd>
+                  <dd><a href="#">JACKET</a></dd>
+                  <dd><a href="#">TRAINING WARE</a></dd>
+                  <dd><a href="#">BEACH WARE</a></dd>
+              </dl>
+              <dl>
+                  <dt><a href="#">STYLE</a></dt>
+                  <dd><a href="#">COLLECTION</a></dd>
+                  <dd><a href="#">SEASON AD</a></dd>
+                  <dd><a href="#">STAR &amp; NEWS</a></dd>
+                  <dd><a href="#">MAIN ITEM</a></dd>
+              </dl>
+          </nav>
+      </div>
+  </header>
+
+  `,
+
+  // 하단영역 html 데이터
+  barea: `    
+  <address>
+      서울특별시 강남구 언주로 541 에프앤에프빌딩<br />
+      사업자등록번호 : 214-86-09977 / 통신판매업 신고번호 : 제2011-서울강남-00086호 (주)
+      에프앤에프 / 대표 : 김창수<br />
+      교환·반품 반송처 : (17384) 경기도 이천시 마장면 프리미엄아울렛로 113-37 F&amp;F
+      물류센터 디스커버리 물류부<br /><br />
+
+      고객센터　<em>080 - 820 - 8802</em> 　　 평일 오전 9시 ~ 오후 6시 (토·일·공휴일
+      휴무) <br />
+      A/S : 02 - 3474 - 8914　 E - MAIL :
+      <a href="mailto:discovery@fnf.co.kr" title="메일 보내기">discovery@fnf.co.kr</a> 　
+      FAX : 02 - 520 - 0991 <br /><br />
+
+      COPYRIGHT F&amp;F CO.,LTD.ALL RIGHTS RESERVED
+  </address>
+
+  `,
+}; ///////////////// comData //////////////
 
 
-// 스와이퍼 플러그인 인스턴스 생성하기 ///
-// 스와이퍼 생성함수
-function makeSwiper(){
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        // 인터렉션 비활성화 false 
-        // -> 인터렉션 활성화! (가만히두면 다시자동넘김)
-      },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true, // 블릿클릭이동여부
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-} /////////// makeSwiper 함수 ///////////
+// 내보내기
+export default comData;
