@@ -88,5 +88,66 @@ const myele4 = (
 
 // 네번째 div요소에 출력하기
 ReactDOM.render(myele4,document.querySelectorAll("#root>div")[3]);
+
+// 5번에는 내가 원하는 태그를 출력해본다!
+const mydata = [
+    {idx:"1", name:"김수현"},
+    {idx:"2", name:"장우혁"},
+    {idx:"3", name:"김혜수"}
+];
+
+const mylist = mydata.map(val=>
+    <li>{val.idx} : {val.name} 😍 {val.idx==3?"예뻐":"멋쪄"}</li>
+);
+
+const myele5 = 
+<React.Fragment>
+    <h1>배우 리스트</h1>
+    <ul>{mylist}</ul>
+</React.Fragment>;
+
+// 다섯번째 div요소에 출력하기
+ReactDOM.render(myele5,document.querySelectorAll("#root>div")[4]);
+
 /*******************************************************
+    [ JSX는 홀로태그라도 끝에 닫기를 해줘야한다! ]
+    예) <br> -> <br />
+        <input type="text"> -> <input type="text" />
 *******************************************************/
+
+/*******************************************************
+    [ JSX에서 속성 클래스는 className 으로 표기한다! ]
+    <태그 class="클래스명">
+    class는 JS에서 키워드이므로 사용못함! 대신...
+    <태그 className="클래스명">
+*******************************************************/
+
+const myele7 = <h1 className="myclass">className 속성으로 클래스 셋팅!</h1>;
+
+// 일곱번째 div요소에 출력하기
+ReactDOM.render(myele7, document.querySelectorAll("#root>div")[6]);
+
+/*******************************************************
+    [ JSX 에서 조건문 사용하기 - if문 ]
+    리액트는 if명령문을 지원하지만
+    JSX내부에서는 지원하지 않는다!
+
+    JSX에서 조건문을 사용하려면?
+    JSX 외부에서 if문을 사용하거나
+    아니면 내부에서 삼항연산자를 사용할 수 있다!
+*******************************************************/
+
+// JSX 외부에서 if문 사용하기
+const x = 100000;
+let txt = "이 돈으로는 충분히 살 수 있어!";
+if(x<10000){
+    txt = "돈이 부족해서 살 수 없어!"
+} // if
+
+const myele8 = <div>
+    <h1>현재 내가 가진 돈은 {x}원!</h1>
+    <h1>{txt}</h1>
+</div>;
+
+// 여덟번째 div요소에 출력하기
+ReactDOM.render(myele8, document.querySelectorAll("#root>div")[7]);
