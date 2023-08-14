@@ -35,6 +35,9 @@ npm uninstall -g create-react-app
 npm install -g create-react-app
 create-react-app my-app
 
+리액트 생성을 하면서 동시에 타입스크립트를 적용
+npx create-react-app `프로젝트 이름` --template typescript
+
 (my-app은 내가지은이름)
 
 참고: npx는 npm 과 달리 버전 선택하지 않아도 최신버전의 리액트 모듈을 설치해 준다!(버전이 상이해서 생기는 문제를 막아준다!)
